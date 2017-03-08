@@ -1,0 +1,35 @@
+﻿browser -- > guacamole server --> |-->rdp 
+				  |-->vnc
+				  |-->other
+
+
+server
+client
+auth-noauth
+
+--------------------------
+1.安装guacamole 服务端centos 
+  1.yum install cairo-devel libping-devel uuid-devel libtool –y
+  2.yum install freerdp-devel pango-devel libsshd-devel libtelnet-devel libvncserver-devel pulseaudio-libs-devel openssl-devel libvorbis-devel libssh2-devel –y
+  3.yum install git
+  4.git clone git://github.com/glyptodon/guacamole-server.git
+    cd guacamole-server
+    autoreconf -fi
+    ./configure --with-init-dir=/etc/init.d
+    make
+    make install
+    ldconfig
+  5. yum install apache-maven
+  6. yum install tomcat
+  7. git clone git://github.com/glyptodon/guacamole-client.git
+     cd guacamole-client
+     mvn package
+     cp guacamole/target/guacamole-0.9.7.war /var/lib/tomcat/webapps/guacamole.war
+     mkdir /etc/guacamole
+     mkdir /usr/share/tomcat7/.guacamole
+
+
+2.下载客户端 ：https://github.com/glyptodon/guacamole-client
+3.编译项目：mvn install 复制 jar all.js
+
+-- 未完待续
