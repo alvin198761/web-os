@@ -7,6 +7,8 @@ web-os-ui: 项目前端，可以独立运行，具体操作见内部 readme.md
 实例图：
 
 
-![image](https://github.com/alvin198761/html_js/blob/master/vue_desktop/readme/333.png?raw=true)
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/111.png?raw=true)
+
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/222.png?raw=true)
 
 
