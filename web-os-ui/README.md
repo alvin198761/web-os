@@ -32,5 +32,6 @@ v 0.1 原本是放在 html_js 目录
 #1027-3-5 ：本来是准备今天实现 rdp vnc putty 功能的，网上看看，结果都需要 通过一层代理，如果是通过代理，我这里就需要做一个后端程序了，
             我建议如果需要 这些功能的人去看看 guacamole ，我曾经用它做过 上面的功能，该项目临时先做到这个位置，如果想到需求再加上
 效果图：
-![image](https://github.com/alvin198761/html_js/blob/master/vue_desktop/readme/111.png?raw=true)
-![image](https://github.com/alvin198761/html_js/blob/master/vue_desktop/readme/222.png?raw=true)
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/111.png?raw=true)
+
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/222.png?raw=true)
