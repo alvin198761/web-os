@@ -254,15 +254,22 @@ public class GuacamoleController {
      */
     protected GuacamoleTunnel doConnect(HttpServletRequest request)
             throws GuacamoleException {
-        String id = request.getParameter("id");
-        Protocol protocol = this.settingService.getRDP(Long.parseLong(id));
-        Assert.notNull(protocol, "protocol must not be null");
+//        String id = request.getParameter("id");
+//        Protocol protocol = this.settingService.getRDP(Long.parseLong(id));
+//        Assert.notNull(protocol, "protocol must not be null");
         GuacamoleConfiguration config = new GuacamoleConfiguration();
-        config.setProtocol(request.getParameter("type"));
-        config.setParameter("hostname", protocol.getIp());
-        config.setParameter("port", protocol.getPort().toString());
-        config.setParameter("username", protocol.getUser());
-        config.setParameter("password", protocol.getPassword());
+
+        config.setProtocol("ssh");
+        config.setParameter("hostname","192.168.0.104");
+        config.setParameter("port", "22");
+        config.setParameter("username", "root");
+        config.setParameter("password", "111111");
+
+//        config.setProtocol(request.getParameter("type"));
+//        config.setParameter("hostname", protocol.getIp());
+//        config.setParameter("port", protocol.getPort().toString());
+//        config.setParameter("username", protocol.getUser());
+//        config.setParameter("password", protocol.getPassword());
         config.setParameter("width", request.getParameter("width"));
         config.setParameter("height", request.getParameter("height"));
         GuacamoleSocket socket = new ConfiguredGuacamoleSocket(

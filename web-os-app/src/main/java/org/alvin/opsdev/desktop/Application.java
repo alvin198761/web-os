@@ -7,10 +7,13 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.socket.config.annotation.EnableWebSocket;
 
 @Configuration
 @EnableAutoConfiguration
 @SpringBootApplication
+@EnableWebSocket
+@ServletComponentScan
 public class Application extends SpringBootServletInitializer {
 
     @Override
