@@ -1,0 +1,101 @@
+测试环境：centos 6.8 vm
+	ip:192.168.0.104
+
+更换 安装源：
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+cd /etc/yum.repos.d/
+wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
+yum makecache
+yum -y update
+
+安装openjdk:版本自己选
+yum search jdk
+yum install java-1.8.0-openjdk.x86_64
+
+配置环境变量：JRE_HOME
+vi /etc/profile
+
+export 之前加入
+JRE_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.el6_8.x86_64/jre
+PATH=$PATH:$JRE_HOME/bin
+
+使用：source /etc/profile 生效
+
+安装tomcat：版本自选，1.5 以下貌似不支持 jre_home的方式
+wget http://mirrors.hust.edu.cn/apache/tomcat/tomcat-7/v7.0.76/bin/apache-tomcat-7.0.76.tar.gz
+解压： tar -xf apache-tomcat-7.0.76.tar.gz
+放到目标位置：mv apache-tomcat-7.0.76 /var/lib/tomcat7
+到运行位置：cd /var/lib/tomcat7/bin
+启动：sh startup.sh
+停止：sh shutdown.sh
+
+
+安装依赖库：
+yum -y install cairo-devel libjpeg-turbo-devel libjpeg-devel libpng-devel uuid-devel freerdp-devel pango-devel libssh2-devel libtelnet-devel libvncserver-devel pulseaudio-libs-devel openssl-devel libvorbis-devel
+
+安装gucamole
+下载：wget http://downloads.sourceforge.net/project/guacamole/current/source/guacamole-server-0.9.9.tar.gz
+解压：tar -xf guacamole-server-0.9.9.tar.gz
+cd guacamole-server-0.9.9/
+./configure --with-init-dir=/etc/init.d
+make
+make install
+ldconfig
+
+--------------------------
+安装gucamole客户端：
+wget http://downloads.sourceforge.net/project/guacamole/current/binary/guacamole-0.9.9.war
+部署客户端：
+cp guacamole-0.9.9.war /var/lib/tomcat7/webapps/guacamole.war
+
+
+开启防火墙端口：
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
+
+运行启动tomcat
+
+访问地址：http://192.168.0.104:8080/guacamole
+----------------------
+
+
+创建目录：
+mkdir /usr/share/tomcat7
+mkdir /usr/share/tomcat7/.guacamole
+mkdir /etc/guacamole
+cd /etc/guacamole/
+touch guacamole.properties
+配置内容：
+guacd-hostname: localhost
+guacd-port:     4822
+
+touch user-mapping.xml
+
+配置内容：
+ <user-mapping>
+                <authorize username="admin" password="123456">
+                        <connection name="vnc">
+                                <protocol>vnc</protocol>
+                                <param name="hostname">192.168.2.206</param>
+                                <param name="port">5901</param>
+                                <param name="username">root</param>
+                                <param name="password">123456</param>
+                        </connection>
+                        <connection name="rdp">
+                                <protocol>rdp</protocol>
+                                <param name="hostname">192.168.2.206</param>
+                                <param name="port">3389</param>
+                                <param name="username">root</param>
+                                <param name="password">123456</param>
+                        </connection>
+                        <connection name="ssh">
+                                <protocol>ssh</protocol>
+                                <param name="hostname">192.168.2.206</param>
+                                <param name="port">22</param>
+                                <param name="username">root</param>
+                                <param name="password">123456</param>
+                        </connection>
+                </authorize>
+        </user-mapping>
+
+ 重启tomcat
+/etc/init.d/guacd restart
