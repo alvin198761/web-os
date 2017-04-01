@@ -20,9 +20,10 @@ public class SettingService {
         RdpBean rdpBean = new RdpBean();
         rdpBean.setId(1L);
         rdpBean.setDomain("");
-        rdpBean.setIp("192.168.192.129");
+        rdpBean.setIp("192.168.0.103");
         rdpBean.setPort(3389);
         rdpBean.setUser("administrator");
+        rdpBean.setPassword("1");
         list.add(rdpBean);
         return list;
     }
@@ -31,9 +32,11 @@ public class SettingService {
         List<SshBean> list = Lists.newArrayList();
         SshBean sshBean = new SshBean();
         sshBean.setId(1L);
-        sshBean.setIp("192.168.192.129");
+        sshBean.setIp("192.168.0.104");
         sshBean.setPort(22);
-        sshBean.setUser("administrator");
+        sshBean.setUser("root");
+        sshBean.setPassword("111111");
+
         return list;
     }
 
@@ -41,9 +44,10 @@ public class SettingService {
         List<VncBean> list = Lists.newArrayList();
         VncBean vnc = new VncBean();
         vnc.setId(1L);
-        vnc.setIp("192.168.192.129");
-        vnc.setPort(5901);
-        vnc.setUser("root");
+        vnc.setIp("192.168.0.104");
+        vnc.setPort(5900);
+        //vnc.setUser("root");
+        vnc.setPassword("");
         return list;
     }
 

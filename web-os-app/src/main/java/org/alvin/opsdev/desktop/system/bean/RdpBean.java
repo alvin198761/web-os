@@ -10,6 +10,7 @@ public class RdpBean {
     private String user;
     private String ip;
     private Integer port;
+    private String password;
 
 
     public String getDomain() {
@@ -36,6 +37,13 @@ public class RdpBean {
         this.port = port;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public String getIp() {
         return ip;
@@ -53,4 +61,6 @@ public class RdpBean {
     public void setId(Long id) {
         this.id = id;
     }
+
+
 }

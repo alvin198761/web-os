@@ -13,6 +13,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.socket.WebSocketSession;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 public class TutorialGuacamoleWebSocketTunnelHandler extends GuacamoleWebSocketTunnelHandler {
 
 //	@Autowired
@@ -30,14 +34,28 @@ public class TutorialGuacamoleWebSocketTunnelHandler extends GuacamoleWebSocketT
 
 	@Override
 	GuacamoleTunnel createTunnel(WebSocketSession session) throws GuacamoleException {
-		logger.debug("createTunnel");
+		System.out.println(session.getUri());
+		Properties properties = new Properties();
+        try {
+            properties.load(new ByteArrayInputStream(session.getUri().getQuery().replace('&','\n').getBytes()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(properties);
+
+
+        logger.debug("createTunnel");
 		// Create our configuration
 		GuacamoleConfiguration config = new GuacamoleConfiguration();
-		config.setProtocol("vnc");
-		config.setParameter("hostname", "192.168.0.104");
-		config.setParameter("port", "5900");
-//		config.setParameter("user", "root");
-//		config.setParameter("password", "111111");
+//        properties.getProperty("id");
+//        properties.getProperty("type")
+		config.setProtocol("rdp");
+		config.setParameter("hostname", "192.168.0.103");
+		config.setParameter("port", "3389");
+		config.setParameter("user", "administrator");
+		config.setParameter("password", "11");
+        config.setParameter("width",properties.getProperty("width"));
+        config.setParameter("height",properties.getProperty("height"));
 
 		// Connect to guacd - everything is hard-coded here.
 		GuacamoleSocket socket = new ConfiguredGuacamoleSocket(new InetGuacamoleSocket(guacamoleServer, guacamoleServerPort),

@@ -1,9 +1,13 @@
 package org.alvin.opsdev.desktop.config;
 
+import org.springboot.guacamole.http.TutorialGuacamoleTunnelServlet;
 import org.springboot.guacamole.websocket.GuacamoleHandshakeInterceptor;
 import org.springboot.guacamole.websocket.TutorialGuacamoleWebSocketTunnelHandler;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.socket.WebSocketHandler;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
@@ -24,12 +28,12 @@ import java.io.IOException;
 @EnableWebSocket
 public class WebSocketConfiguration implements WebSocketConfigurer {
 
-//    @Autowired
-//    private TutorialGuacamoleTunnelServlet tutorialGuacamoleTunnelServlet;
-//
+    @Autowired
+    private TutorialGuacamoleTunnelServlet tutorialGuacamoleTunnelServlet;
+
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-//        registry.addHandler(guacamoleWebSocketTunnel(), "/websocket-tunnel").addInterceptors(myIntecerptor());
+        registry.addHandler(guacamoleWebSocketTunnel(), "/websocket-tunnel").addInterceptors(myIntecerptor());
     }
 
     private HandshakeInterceptor myIntecerptor() {

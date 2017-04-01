@@ -43,10 +43,7 @@
 var display = document.getElementById("display");
 
 // Instantiate client, using an HTTP tunnel for communications.
-var guac = new Guacamole.Client(
-  new Guacamole.HTTPTunnel("/xs/tunnel")
-);
-
+var guac = new Guacamole.Client(new Guacamole.WebSocketTunnel("websocket-tunnel"));
 // Add client to display div
 display.appendChild(guac.getDisplay().getElement());
 
@@ -55,12 +52,25 @@ guac.onerror = function (error) {
   alert(error);
 };
 
-// Connect  "id=" + id + "&type=" + type + "&width=" + (window.innerWidth - 20) + "&height=" + (window.innerHeight - 20)
-var id =1 ;
-var type="vnc";
-var hostname="192.168.0.104";
-var port=5900;
-guac.connect("hostname="+hostname+"&port="+port+"&id=" + 1 + "&type=" + type + "&width=" + (window.innerWidth - 20) + "&height=" + (window.innerHeight - 20));
+function GetRequest() {
+
+  var url = location.search; //获取url中"?"符后的字串
+  var theRequest = new Object();
+  if (url.indexOf("?") != -1) {
+    var str = url.substr(1);
+    strs = str.split("&");
+    for(var i = 0; i < strs.length; i ++) {
+      theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+    }
+  }
+  return theRequest;
+}
+Request = GetRequest();
+
+var id = Request["id"];
+var type= Request["type"];
+
+guac.connect("id=" + 1 + "&type=" + type + "&width=" + (window.innerWidth - 20) + "&height=" + (window.innerHeight - 20));
 
 // Disconnect on close
 window.onunload = function () {
@@ -86,6 +96,10 @@ keyboard.onkeydown = function (keysym) {
 keyboard.onkeyup = function (keysym) {
   guac.sendKeyEvent(0, keysym);
 };
+
+window.addEventListener("resize",function () {
+  document.execCommand('Refresh')
+})
 
 /* ]]> */ </script>
 </body>

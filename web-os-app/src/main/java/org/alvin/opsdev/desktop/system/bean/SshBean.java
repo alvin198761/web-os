@@ -9,7 +9,15 @@ public class SshBean {
     private String ip;
     private Integer port;
     private String user;
+    private String password;
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public Long getId() {
         return id;
