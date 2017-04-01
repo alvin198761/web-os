@@ -10,7 +10,7 @@
 
 更新日志：
 * 2017/3/30状态：经过一番苦战，用户把guacamole 和spring boot 搞定，感谢
-                这位[大神的项目](https://github.com/nirving-versent/springboot-guacamole)
+                这位大神的项目[nirving-versent/springboot-guacamole](https://github.com/nirving-versent/springboot-guacamole)
                 其他问题需要调整的，等过阵子吧，感觉元气大伤，需要休息一段时间
                 
 * 2017/3/7状态：guacamole 前端和后端集成代码写完，苦于没有测试环境，具体测试还需要等我环境搭好。
