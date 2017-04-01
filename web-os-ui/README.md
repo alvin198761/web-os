@@ -7,6 +7,13 @@
 
 开发运行：npm run start
 
+效果图：
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/rdp.png?raw=true)
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/vnc.png?raw=true)
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/ssh.png?raw=true)
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/111.png?raw=true)
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/222.png?raw=true)
+
 我的 qq 群：481434622
 
 邮箱：alvin198761@163.com
@@ -16,6 +23,7 @@
 
 更新:
 v 1.0 :
+2017/4/1: 前端已经完成 gucamole的接入，能够正常连接各种系统，后端还没有做完，数据还没有动态化
 2017/3/8 : 项目目录转入 web-os 单独目录，用来单独维护
 			完成 浏览器初始位置
 			ie9 兼容问题
@@ -32,10 +40,3 @@ v 0.1 原本是放在 html_js 目录
 
 #1027-3-5 ：本来是准备今天实现 rdp vnc putty 功能的，网上看看，结果都需要 通过一层代理，如果是通过代理，我这里就需要做一个后端程序了，
             我建议如果需要 这些功能的人去看看 guacamole ，我曾经用它做过 上面的功能，该项目临时先做到这个位置，如果想到需求再加上
-效果图：
-![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/rdp.png?raw=true)
-![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/vnc.png?raw=true)
-![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/ssh.png?raw=true)
-![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/111.png?raw=true)
-
-![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/222.png?raw=true)
