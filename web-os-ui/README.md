@@ -20,6 +20,8 @@
 
 描述：因为没有一个vue2 的web desktop ,自己花了一天多的时间，通过从网上找例子，和自己写代码，实现了一个简单的web desktop,
 		经过这几天的改造，应该勉强可以使用了，只是还有些bug ,如果有需要的，可以拿过去使用，有问题可以联系我
+spice html5地址:[https://github.com/SPICE/spice-html5](https://github.com/SPICE/spice-html5)
+ipmi nodejs地址:[https://github.com/phillipsnick/supermicro-ipmi](https://github.com/phillipsnick/supermicro-ipmi)
 
 更新:
 v 1.0 :
