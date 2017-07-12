@@ -1,7 +1,7 @@
 <template>
   <div>
     <Desktop></Desktop>
-    <!--<ContextMenu></ContextMenu>-->
+    <ContextMenu></ContextMenu>
   </div>
 </template>
 
