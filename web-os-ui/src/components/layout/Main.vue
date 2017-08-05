@@ -1,13 +1,14 @@
 <template>
   <div>
-    <router-view></router-view>
+    <Desktop></Desktop>
+    <ContextMenu></ContextMenu>
   </div>
 </template>
 
 <script>
   import {mapGetters} from 'vuex'
-  import Desktop from './components/layout/Desktop.vue';
-  import ContextMenu from './components/layout/ContextMenu.vue';
+  import Desktop from './Desktop.vue';
+  import ContextMenu from './ContextMenu.vue';
   export default {
     name: 'app',
     data: function () {

@@ -14,9 +14,9 @@
         </div>
         <div class="dock_tool_list" id="dockToolList">
           <div class="dock_tool_item">
-            <a title="输入法" cmd="Pinyin" class="dock_tool_icon dock_tool_pinyin"
-               href="javascript:void(0)"></a>
-            <a title="静音" cmd="Sound" class="dock_tool_icon dock_tool_sound"
+            <a title="照相机" class="dock_tool_icon dock_tool_pinyin"
+               href="javascript:void(0)" @click="openCapture"></a>
+            <a title="声音" cmd="Sound" class="dock_tool_icon dock_tool_sound"
                href="javascript:void(0)"></a>
           </div>
           <div class="dock_tool_item">
@@ -52,7 +52,7 @@
     methods: {
       ...mapMutations({}),
       openBrowser: function (app) {
-         this.$store.dispatch('taskbar/open_'+app.url, app)
+        this.$store.dispatch('taskbar/open_' + app.url, app)
       },
       openSystemSettingDialog: function (e) {
         this.$store.commit('desktop/addComponent', {
@@ -60,6 +60,16 @@
           options: {},
           userObject: {}
         })
+      },
+      openCapture: function () {
+        const app = {
+          id: 'capture_001',
+          type: 1,
+          title: '照相机',
+          icon: require('../../assets/icon/1.png'),
+          url: '#/capture'
+        }
+        this.$store.dispatch('taskbar/addBrowser', app);
       }
     }
   }

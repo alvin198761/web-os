@@ -14,7 +14,7 @@ module.exports = {
         type: Mock.mock('@integer(1,2)'),
         title: '测试应用' + i,
         icon: pic + '.png',
-        url: 'http://www.baidu.com',
+        url: 'https://www.iviewui.com/docs/guide/install',
         msgCount: Mock.mock('@integer(0, 3)')
       })
     }
