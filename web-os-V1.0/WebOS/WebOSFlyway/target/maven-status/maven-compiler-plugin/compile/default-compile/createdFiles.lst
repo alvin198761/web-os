@@ -1,0 +1,3 @@
+org\alvin\opsdev\webos\migration\bean\WebOsConfig.class
+org\alvin\opsdev\webos\migration\bean\DataSourceVo.class
+org\alvin\opsdev\webos\migration\FlywayMain.class

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Common/Common.iml" filepath="$PROJECT_DIR$/Common/Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebOS.iml" filepath="$PROJECT_DIR$/WebOS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebOSApp/WebOSApp.iml" filepath="$PROJECT_DIR$/WebOSApp/WebOSApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebOSFlyway/WebOSFlyway.iml" filepath="$PROJECT_DIR$/WebOSFlyway/WebOSFlyway.iml" />
+    </modules>
+  </component>
+</project>

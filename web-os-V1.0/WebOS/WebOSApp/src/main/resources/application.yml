@@ -1,0 +1,46 @@
+server:
+  ssl:
+    key-store: classpath:keystore.jks
+    key-password: dl123456
+    key-store-password: dl123456
+    key-alias: webos
+    protocol: TLSv1.2
+    enabled: true
+  http2:
+     enabled: true
+  use-forward-headers: true
+  compression:
+    enabled: true
+    mime-types:
+    - application/json
+    - application/xml
+    - text/html
+    - text/xml
+    - text/plain
+    - application/javascript
+    - text/css
+  port: 4004
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10Mb
+      max-request-size: 10Mb
+  mvc:
+    favicon:
+      enabled: false
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/webosapp?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: alvin
+
+http:
+  port: 4005
+guacamole:
+  server:
+    ip: 192.168.0.104
+    port: 4822
+
