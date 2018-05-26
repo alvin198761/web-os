@@ -100,7 +100,7 @@ export default {
     },
     ['desktop/bindEvent'](state)    {
       function move(evt) {
-        window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
+       // window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
       }
 
       function up(evt) {
