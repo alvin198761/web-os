@@ -1,13 +1,6 @@
 /**
  * Created by tangzhichao on 2017/2/27.
  */
-import AppDialog from '../../components/commons/AppDialog.vue';
-import Browser from '../../components/commons/Browser.vue';
-import RdpManagerDialog from '../../components/setting/rdp/RdpManagerDialog.vue';
-import SSHManagerDialog from '../../components/setting/ssh/SSHManagerDialog.vue';
-import VncManagerDialog from '../../components/setting/vnc/VncManagerDialog.vue';
-import AppIconsDialog from '../../components/setting/appicons/AppIconsDialog.vue';
-
 import {componentIndexOf} from '../../constant';
 export default {
   state: {
@@ -56,6 +49,10 @@ export default {
         el_id: payload.id,
         task: payload.task
       })
+    },
+    //删除所有窗体
+    ["task/clean"](state,payload){
+      state.tasks = [];
     }
   },
   actions: {
@@ -64,7 +61,7 @@ export default {
       let id = 'dialog_' + payload.id + '_box';
       if (componentIndexOf(rootState.taskbar.tasks, id) === -1) {
         commit('desktop/addComponent', {
-          component: AppDialog,
+          component: require('../../components/commons/AppDialog.vue'),
           options: {},
           userObject: payload
         })
@@ -81,7 +78,7 @@ export default {
       let id = 'browser_' + payload.id + '_box'
       if (componentIndexOf(rootState.taskbar.tasks, id) === -1) {
         commit('desktop/addComponent', {
-          component: Browser,
+          component: require('../../components/commons/Browser.vue'),
           options: {},
           userObject: payload
         })
@@ -102,7 +99,7 @@ export default {
     ['taskbar/open_rdp']({rootState, commit, dispatch}, payload){
       if (rootState.taskbar.tasks.indexOf(payload.route_url) === -1) {
         commit('desktop/addComponent', {
-          component: RdpManagerDialog,
+          component: require('../../components/setting/rdp/RdpManagerDialog.vue'),
           options: {},
           userObject: payload
         })
@@ -117,7 +114,7 @@ export default {
     ['taskbar/open_putty']({rootState, commit, dispatch}, payload){
       if (rootState.taskbar.tasks.indexOf(payload.route_url) === -1) {
         commit('desktop/addComponent', {
-          component: SSHManagerDialog,
+          component: require( '../../components/setting/ssh/SSHManagerDialog.vue'),
           options: {},
           userObject: payload
         })
@@ -132,7 +129,7 @@ export default {
     ['taskbar/open_vnc']({rootState, commit, dispatch}, payload){
       if (rootState.taskbar.tasks.indexOf(payload.route_url) === -1) {
         commit('desktop/addComponent', {
-          component: VncManagerDialog,
+          component: require('../../components/setting/vnc/VncManagerDialog.vue'),
           options: {},
           userObject: payload
         })
@@ -147,7 +144,22 @@ export default {
     ["taskbar/addAppIcon"]({rootState,commit,dispatch},payload){
       if (rootState.taskbar.tasks.indexOf(payload.route_url) === -1) {
         commit('desktop/addComponent', {
-          component: AppIconsDialog,
+          component: require( '../../components/setting/appicons/AppIconsDialog.vue'),
+          options: {},
+          userObject: { ...payload ,parent_id : rootState.contentpane.currentMenu.id}
+        })
+        commit('taskbar/addTask', {
+          id: payload.route_url,
+          task: payload
+        })
+      }
+      dispatch('taskbar/activeTask', payload.route_url)
+    },
+    //打开添加应用的窗口
+    ["taskbar/addAppIconDir"]({rootState,commit,dispatch},payload){
+      if (rootState.taskbar.tasks.indexOf(payload.route_url) === -1) {
+        commit('desktop/addComponent', {
+          component: require('../../components/setting/appicons/AppIconsDirDialog.vue'),
           options: {},
           userObject: { ...payload ,parent_id : rootState.contentpane.currentMenu.id}
         })

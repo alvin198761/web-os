@@ -1,7 +1,7 @@
 /*应用程序图标新增与修改,作者:唐植超,日期:2018-05-12 16:51:08*/
 <template>
-  <Explorer :id="userObject.route_url" title="添加应用" :resize="false" :min="false" :max="false"
-            :handleClose="handleClose" :winHeight="420">
+  <Explorer :id="userObject.route_url" title="添加应用目录" :resize="false" :min="false" :max="false"
+            :handleClose="handleClose" :winHeight="300" :winWidth="300">
     <div slot="content" style="padding-left: 20px; padding-right: 20px; padding-top: 10px">
       <el-form :model="form" ref="form" :rules="rules" label-width="100px">
         <el-form-item label="显示文本" prop="title">
@@ -9,12 +9,6 @@
         </el-form-item>
         <el-form-item label="悬停提示" prop="tip">
           <el-input placeholder="请输入悬停提示" size="small" v-model="form.tip"></el-input>
-        </el-form-item>
-        <el-form-item label="图标链接" prop="icon">
-          <el-input placeholder="请输入图标" size="small" v-model="form.icon"></el-input>
-        </el-form-item>
-        <el-form-item label="应用地址" prop="route_url">
-          <el-input placeholder="请输入对应路由地址" size="small" v-model="form.route_url"></el-input>
         </el-form-item>
         <el-form-item label="状态" prop="status">
           <el-switch
@@ -53,12 +47,6 @@
           tip: [
             {required: true, message: '请输入悬停提示', trigger: 'blur'},
           ],
-          icon: [
-            {required: true, message: '请输入图标', trigger: 'blur'},
-          ],
-          route_url: [
-            {required: true, message: '请输入对应路由地址', trigger: 'blur'},
-          ],
           status: [
             {required: true, message: '请输入状态', trigger: 'blur'},
           ],
@@ -72,14 +60,18 @@
           if (!valid) {
             return;
           }
-          const data = {...that.form, type: APP_TYPE.APP, parent_id: that.userObject.parent_id};
+          const data = {
+            ...that.form,
+            type: APP_TYPE.DIR,
+            parent_id: that.userObject.parent_id
+          };
           that.$http.post("/api/appIcons/" + that.dialogMode, JSON.stringify(data)).then(res => {
             that.show = false;
-            that.$message.success("保存应用成功!");
+            that.$message.success("保存应用目录成功!");
             that.refresh();
             that.handleClose();
           }).catch(res => {
-            that.$message.error("保存应用出错!" + res);
+            that.$message.error("保存应用目录出错!" + res);
           });
         });
       },

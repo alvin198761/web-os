@@ -4,7 +4,6 @@
 import {Message} from 'element-ui';
 import JSComponent from '../bean/JSComponent';
 import {desktopContextMenu} from '../../constant';
-import ClockTool from '../../components/tools/ClockTool.vue';
 export default {
   state: {
     el: null,
@@ -58,7 +57,7 @@ export default {
         $(document).bind('mousemove', move).bind('mouseup', up);
       });
     },
-    ['desktop/mainMenu'](state,payload)    {
+    ['desktop/mainMenu'](state, payload)    {
       state.contentMenuData = payload;
       $('#contentPane').smartMenu(state.contentMenuData, {name: "image"});
     },
@@ -68,9 +67,11 @@ export default {
     ['desktop/removeComponent'](state, payload){
       state.components.splice(payload, 1);
     },
-    ['desktop/setDesktopContextMenus'](state,payload){
-      console.log(payload)
+    ['desktop/setDesktopContextMenus'](state, payload){
       state.contentMenuData = payload;
+    },
+    ['desktop/clean'](state){
+      state.components = [];
     }
   },
   actions: {
@@ -79,8 +80,8 @@ export default {
       commit('desktop/bindEvent');
       commit('desktop/initComponent');
     },
-    ['desktop/initContextMenu']({dispatch,commit}){
-      commit('desktop/mainMenu',desktopContextMenu(dispatch,commit));
+    ['desktop/initContextMenu']({dispatch, commit}){
+      commit('desktop/mainMenu', desktopContextMenu(dispatch, commit));
       commit('taskbar/taskMenu');
     },
     ['desktop/removeComponent']({commit}, payload){
@@ -89,7 +90,7 @@ export default {
     ['desktop/initChildren']({commit, dispatch}){
       dispatch('note/initComponent')
       commit('desktop/addComponent', {
-        component: ClockTool,
+        component: require('../../components/tools/ClockTool.vue'),
         options: {},
         userObjec: {}
       });

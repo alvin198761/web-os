@@ -44,3 +44,7 @@ guacamole:
     ip: 192.168.0.104
     port: 4822
 
+img:
+  server: http://192.168.1.93/webos/
+  folder_icon: folder_o.png
+

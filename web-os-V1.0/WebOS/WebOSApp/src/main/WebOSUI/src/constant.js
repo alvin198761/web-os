@@ -28,7 +28,7 @@ export function desktopContextMenu(dispatch, commit) {
               "id": -1,
               "type": 1,
               "title": "添加应用",
-              "tip": "添加自定义应用或目录",
+              "tip": "添加自定义应用",
               "icon": require("./assets/icon/addAppItem.png"),
               "publish_id": 0,
               "create_time": new Date(),
@@ -41,14 +41,26 @@ export function desktopContextMenu(dispatch, commit) {
         {
           text: '目录',
           func: function () {
-
+            dispatch("taskbar/addAppIconDir",  {
+              "id": -1,
+              "type": 1,
+              "title": "添加应用目录",
+              "tip": "添加自定义应用目录",
+              "icon": require("./assets/icon/addAppItem.png"),
+              "publish_id": 0,
+              "create_time": new Date(),
+              "parent_id": 0,
+              "route_url": "appAppItemDir",
+              "status": 1
+            });
           }
         }
       ]]
     }, {
       text: "关闭所有",
       func: function () {
-        // Windows.closeAllWindow();
+          commit("task/clean");
+          commit('desktop/clean');
       }
     }, {
       text: "锁屏",

@@ -6,6 +6,7 @@ import org.alvin.opsdev.webos.commom.app.appicons.AppIconsCond;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,11 +25,20 @@ public class AppIconsService {
 	@Autowired
 	private AppIconsDao dao; //注入应用程序图标数据访问层
 
+	@Value("${img.server}")
+	private String imgServer;
+	@Value("${img.folder_icon}")
+	private String folder_icon;
+
 	/**
 	 * @方法说明:新增应用程序图标记录
 	 **/
 	@Transactional
 	public int save(AppIcons appIcons) {
+		//文件夹处理
+		if (appIcons.getType().intValue() == 4) {
+			appIcons.setIcon(imgServer.concat(folder_icon));
+		}
 		return dao.save(appIcons);
 	}
 

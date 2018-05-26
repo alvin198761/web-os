@@ -24,7 +24,7 @@ export default {
         })
         state.menus = data;
         if (state.menus.length > 0) {
-          store.commit('content/changeCard', {item: 0})
+          store.commit('content/changeCard', {item: 0 ,menu: state.menus[0]})
         }
       }).catch(function (res) {
         state.menus = [];
