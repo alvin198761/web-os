@@ -3,66 +3,13 @@
  */
 import {Message} from 'element-ui';
 import JSComponent from '../bean/JSComponent';
-
+import {desktopContextMenu} from '../../constant';
 import ClockTool from '../../components/tools/ClockTool.vue';
 export default {
   state: {
     el: null,
     components: [],
-    contentMenuData: [
-      [{
-        text: "显示桌面",
-        func: function () {
-          // Windows.showWindowDesk();
-        }
-      }, {
-        text: "关闭所有",
-        func: function () {
-          // Windows.closeAllWindow();
-        }
-      }, {
-        text: "锁屏",
-        func: function () {
-
-        }
-      }], [{
-        text: "系统设置",
-        func: function () {
-
-        }
-      }, {
-        text: "主题设置",
-        func: function () {
-          // Windows.openSys({
-          //   id: 'themSetting',
-          //   title: '设置主题',
-          //   width: 650,
-          //   height: 500,
-          //   content: document.getElementById("themeSetting_wrap")
-          // });
-        }
-      },
-        {
-          text: "图标设置",
-          data: [[{
-            text: "大图标",
-            func: function () {
-              // Deskpanel.desktopsContainer.removeClass("desktopSmallIcon");
-            }
-          }, {
-            text: "小图标",
-            func: function () {
-              // Deskpanel.desktopsContainer.addClass("desktopSmallIcon");
-            }
-          }]]
-        }],
-      [{
-        text: "注销",
-        func: function () {
-
-        }
-      }]
-    ],
+    contentMenuData: [],
 
   },
   getters: {
@@ -100,7 +47,7 @@ export default {
     },
     ['desktop/bindEvent'](state)    {
       function move(evt) {
-        window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
+        // window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
       }
 
       function up(evt) {
@@ -111,7 +58,8 @@ export default {
         $(document).bind('mousemove', move).bind('mouseup', up);
       });
     },
-    ['desktop/mainMenu'](state)    {
+    ['desktop/mainMenu'](state,payload)    {
+      state.contentMenuData = payload;
       $('#contentPane').smartMenu(state.contentMenuData, {name: "image"});
     },
     ['desktop/addComponent'](state, payload){
@@ -120,6 +68,10 @@ export default {
     ['desktop/removeComponent'](state, payload){
       state.components.splice(payload, 1);
     },
+    ['desktop/setDesktopContextMenus'](state,payload){
+      console.log(payload)
+      state.contentMenuData = payload;
+    }
   },
   actions: {
     ['desktop/init']({commit}){
@@ -127,8 +79,8 @@ export default {
       commit('desktop/bindEvent');
       commit('desktop/initComponent');
     },
-    ['desktop/initContextMenu']({commit}){
-      commit('desktop/mainMenu');
+    ['desktop/initContextMenu']({dispatch,commit}){
+      commit('desktop/mainMenu',desktopContextMenu(dispatch,commit));
       commit('taskbar/taskMenu');
     },
     ['desktop/removeComponent']({commit}, payload){

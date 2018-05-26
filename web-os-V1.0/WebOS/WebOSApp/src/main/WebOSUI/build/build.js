@@ -19,6 +19,7 @@ shell.rm('-rf', assetsPath)
 shell.mkdir('-p', assetsPath)
 shell.config.silent = true
 shell.cp('-R', 'static/*', assetsPath)
+shell.cp('-R', 'favicon.ico', "../resources/static/favicon.ico")
 
 //----
 shell.mkdir('-p', assetsPath + "/guacamole")

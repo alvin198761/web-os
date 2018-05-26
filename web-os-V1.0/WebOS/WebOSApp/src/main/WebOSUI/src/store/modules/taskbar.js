@@ -6,6 +6,8 @@ import Browser from '../../components/commons/Browser.vue';
 import RdpManagerDialog from '../../components/setting/rdp/RdpManagerDialog.vue';
 import SSHManagerDialog from '../../components/setting/ssh/SSHManagerDialog.vue';
 import VncManagerDialog from '../../components/setting/vnc/VncManagerDialog.vue';
+import AppIconsDialog from '../../components/setting/appicons/AppIconsDialog.vue';
+
 import {componentIndexOf} from '../../constant';
 export default {
   state: {
@@ -33,18 +35,22 @@ export default {
     }
   },
   mutations: {
+    //初始化应用
     ['taskbar/initComponent'](state){
       state.el = $('#bottomBar')
     },
+    //任务栏右键菜单
     ['taskbar/taskMenu'](state){
       state.el.smartMenu(state.contextMenuData, {
         name: "task_bar",
       });
     },
+    //删除一个窗体
     ['taskbar/removeTask'](state, payload){
       let index = state.tasks.indexOf(payload.task);
       state.tasks.splice(index, 1);
     },
+    //添加一个窗体
     ['taskbar/addTask'](state, payload){
       state.tasks.push({
         el_id: payload.id,
@@ -53,6 +59,7 @@ export default {
     }
   },
   actions: {
+    //显示一个应用
     ['taskbar/addAppDialog']({rootState, commit, dispatch}, payload){
       let id = 'dialog_' + payload.id + '_box';
       if (componentIndexOf(rootState.taskbar.tasks, id) === -1) {
@@ -69,6 +76,7 @@ export default {
       }
       dispatch('taskbar/activeTask', id)
     },
+    //显示一个浏览器
     ['taskbar/addBrowser']({rootState, commit, dispatch}, payload){
       let id = 'browser_' + payload.id + '_box'
       if (componentIndexOf(rootState.taskbar.tasks, id) === -1) {
@@ -85,12 +93,14 @@ export default {
       }
       dispatch('taskbar/activeTask', id)
     },
+    //激活一个应该用
     ['taskbar/activeTask']({commit}, payload){
       commit('browser/showBrowser', {id: '#' + payload});
       commit('browser/clickActiveChange', {id: '#' + payload})
     },
+    //打开rdp窗口
     ['taskbar/open_rdp']({rootState, commit, dispatch}, payload){
-      if (rootState.taskbar.tasks.indexOf(payload.url) === -1) {
+      if (rootState.taskbar.tasks.indexOf(payload.route_url) === -1) {
         commit('desktop/addComponent', {
           component: RdpManagerDialog,
           options: {},
@@ -100,12 +110,12 @@ export default {
           id: 'rdp',
           task: payload
         })
-        return;
       }
-      dispatch('taskbar/activeTask', payload.url)
+      dispatch('taskbar/activeTask', payload.route_url)
     },
+    //打开putty 窗口
     ['taskbar/open_putty']({rootState, commit, dispatch}, payload){
-      if (rootState.taskbar.tasks.indexOf(payload.url) === -1) {
+      if (rootState.taskbar.tasks.indexOf(payload.route_url) === -1) {
         commit('desktop/addComponent', {
           component: SSHManagerDialog,
           options: {},
@@ -115,12 +125,12 @@ export default {
           id: 'ssh',
           task: payload
         })
-        return;
       }
-      dispatch('taskbar/activeTask', payload.url)
+      dispatch('taskbar/activeTask', payload.route_url)
     },
+    //打开vnc窗口
     ['taskbar/open_vnc']({rootState, commit, dispatch}, payload){
-      if (rootState.taskbar.tasks.indexOf(payload.url) === -1) {
+      if (rootState.taskbar.tasks.indexOf(payload.route_url) === -1) {
         commit('desktop/addComponent', {
           component: VncManagerDialog,
           options: {},
@@ -130,9 +140,23 @@ export default {
           id: 'vnc',
           task: payload
         })
-        return;
       }
-      dispatch('taskbar/activeTask', payload.url)
+      dispatch('taskbar/activeTask', payload.route_url)
+    },
+    //打开添加应用的窗口
+    ["taskbar/addAppIcon"]({rootState,commit,dispatch},payload){
+      if (rootState.taskbar.tasks.indexOf(payload.route_url) === -1) {
+        commit('desktop/addComponent', {
+          component: AppIconsDialog,
+          options: {},
+          userObject: { ...payload ,parent_id : rootState.contentpane.currentMenu.id}
+        })
+        commit('taskbar/addTask', {
+          id: payload.route_url,
+          task: payload
+        })
+      }
+      dispatch('taskbar/activeTask', payload.route_url)
     }
 
   }

@@ -23,7 +23,7 @@
     methods: {
       changeCard: function (menu) {
         let index = this.menus.indexOf(menu);
-        this.$store.commit('content/changeCard', {item: index});
+        this.$store.commit('content/changeCard', {item: index, menu: menu});
       }
     },
     mounted: function () {

@@ -5,7 +5,8 @@ export default {
   state: {
     el: null,
     currentCard: 0,
-    cardPane: null
+    cardPane: null,
+    currentMenu: null
   },
   getters: {},
   mutations: {
@@ -15,6 +16,7 @@ export default {
     },
     ['content/changeCard'](state, payload){
       state.currentCard = payload.item;
+      state.currentMenu = payload.menu;
       if (state.cardPane) {
         state.cardPane.setActiveItem(state.currentCard)
       }

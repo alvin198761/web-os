@@ -1,6 +1,6 @@
 <template>
   <Explorer :id="_browserId" :title="userObject.title" :resize="true" :handleClose="handleClose">
-    <iframe slot="content" frameborder="0" :src="userObject.url" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation"></iframe>
+    <iframe slot="content" frameborder="0" :src="userObject.route_url" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation"></iframe>
   </Explorer>
 </template>
 <script>

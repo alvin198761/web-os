@@ -6,8 +6,6 @@
 
 <script>
   import {mapGetters} from 'vuex'
-  import Desktop from './components/layout/Desktop.vue';
-  import ContextMenu from './components/layout/ContextMenu.vue';
   export default {
     name: 'app',
     data: function () {
@@ -17,9 +15,8 @@
       ...mapGetters({}),
     },
     mounted: function () {
-      this.$store.commit("app/init");
+      this.$store.dispatch("app/init");
     },
-    components: {Desktop, ContextMenu}
   }
 </script>
 

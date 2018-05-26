@@ -9,7 +9,6 @@ export default {
   },
   getters: {
     ['fisheye/_menus'](state){
-      console.log(state)
       return state.menus;
     }
   },
@@ -20,15 +19,9 @@ export default {
     ['fisheye/fetch'](state, store){
       http.get('/api/appIcons/fisheye').then(function (res) {
         let data = res.data;
-        for (let i in data) {
-          console.log(data[i])
-          data[i].icon = require('../../assets/images/' + data[i].icon)
-          let apps = data[i].apps;
-          for (let j in apps) {
-            data[i].apps[j].icon = require('../../assets/icon/' + apps[j].icon)
-          }
-        }
-        console.log(data)
+        res.data.map(app => {
+          app.icon = require('../../assets/images/' + app.icon);
+        })
         state.menus = data;
         if (state.menus.length > 0) {
           store.commit('content/changeCard', {item: 0})
@@ -36,6 +29,22 @@ export default {
       }).catch(function (res) {
         state.menus = [];
       });
+    },
+    ["fisheye/refreshCurrent"](state,payload){
+       http.post("/api/appIcons/queryList",JSON.stringify({
+         parent_id:payload
+       })).then(res => {
+         const menus = [];
+          for(let i = 0 ; i < state.menus.length ; i++){
+            if(state.menus[i].id == payload){
+                state.menus[i].apps = res.data;
+            }
+            menus.push(state.menus[i])
+          }
+          state.menus = menus;
+       }).catch(error => {
+
+       })
     }
   },
   actions: {}

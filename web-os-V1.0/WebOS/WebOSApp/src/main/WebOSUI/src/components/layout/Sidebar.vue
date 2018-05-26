@@ -67,7 +67,7 @@
           type: 1,
           title: '照相机',
           icon: require('../../assets/icon/1.png'),
-          url: '#/capture'
+          route_url: '#/capture'
         }
         this.$store.dispatch('taskbar/addBrowser', app);
       }

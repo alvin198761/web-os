@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 740px; height: 500px; " class="window-container window-current"
+  <div :style="{width: winWidth + 'px', height:winHeight + 'px'}" class="window-container window-current"
        :id="id">
     <div style="height: 100%;">
       <div @dblclick="haDblClick" class="title-bar" @mousedown="haMouseDown">{{title}}
@@ -57,6 +57,16 @@
       handleClose: {
         type: Function,
         required: true,
+      },
+      winWidth: {
+          type: Number,
+        required: false,
+        default: 740
+      },
+      winHeight: {
+        type: Number,
+        required: false,
+        default: 500
       }
     },
     data: function () {

@@ -23,18 +23,18 @@ export default {
   },
   actions: {
     ['note/initComponent']({commit}){
-      http.get('/api/note').then(function (res) {
-        commit('note/initNotes', res.data);
-        res.data.map(function (item) {
-          commit('desktop/addComponent', {
-            component: Notes,
-            options: {},
-            userObject: item
-          })
-        })
-      }).catch(function (res) {
-        // state.nodes = [];
-      })
+      // http.get('/api/note').then(function (res) {
+      //   commit('note/initNotes', res.data);
+      //   res.data.map(function (item) {
+      //     commit('desktop/addComponent', {
+      //       component: Notes,
+      //       options: {},
+      //       userObject: item
+      //     })
+      //   })
+      // }).catch(function (res) {
+      //   // state.nodes = [];
+      // })
     }
   }
 };

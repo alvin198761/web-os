@@ -10,13 +10,15 @@ export default {
   getters: {
   },
   mutations: {
-    ['app/init'](state){
+    ["app/initAppData"](state){
       state.user = {
         name: 'alvin'
       }
     }
   },
   actions: {
-
+    ['app/init']({rootState, commit, dispatch}){
+        commit("app/initAppData");
+    }
   }
 };

@@ -860,3 +860,47 @@ Caused by: com.mysql.cj.core.exceptions.InvalidConnectionAttributeException: The
 2018-05-12 18:20:38,020[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
 2018-05-12 18:20:38,209[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
 2018-05-12 18:20:38,530[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-05-26 09:33:58,617[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 292668 (F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp\target\classes started by 动岚未来科技02 in F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp)
+2018-05-26 09:33:58,632[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-05-26 09:34:00,726[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-05-26 09:34:00,742[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-05-26 09:34:00,836[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-05-26 09:34:00,836[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-05-26 09:34:00,867[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-05-26 09:34:03,805[StartupInfoLogger.java:59][INFO]:Started AppMain in 5.876 seconds (JVM running for 14.153)
+2018-05-26 09:34:36,600[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-26 09:36:49,442[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-05-26 09:36:49,749[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-05-26 13:37:37,916[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 246176 (F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp\target\classes started by 动岚未来科技02 in F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp)
+2018-05-26 13:37:37,947[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-05-26 13:37:39,916[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-05-26 13:37:39,932[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-05-26 13:37:40,026[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-05-26 13:37:40,026[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-05-26 13:37:40,057[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-05-26 13:37:42,870[StartupInfoLogger.java:59][INFO]:Started AppMain in 5.563 seconds (JVM running for 13.558)
+2018-05-26 13:38:25,704[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-26 13:38:25,829[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-05-26 13:38:26,147[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-05-26 13:55:34,460[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 341780 (F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp\target\classes started by 动岚未来科技02 in F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp)
+2018-05-26 13:55:34,460[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-05-26 13:55:36,585[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-05-26 13:55:36,600[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-05-26 13:55:36,694[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-05-26 13:55:36,694[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-05-26 13:55:36,725[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-05-26 13:55:39,552[StartupInfoLogger.java:59][INFO]:Started AppMain in 5.671 seconds (JVM running for 13.636)
+2018-05-26 13:55:57,396[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-26 13:55:57,505[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-05-26 13:55:57,845[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-05-26 17:10:31,309[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 371612 (F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp\target\classes started by 动岚未来科技02 in F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp)
+2018-05-26 17:10:31,324[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-05-26 17:10:33,218[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-05-26 17:10:33,249[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-05-26 17:10:33,343[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-05-26 17:10:33,343[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-05-26 17:10:33,374[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-05-26 17:10:36,131[StartupInfoLogger.java:59][INFO]:Started AppMain in 5.479 seconds (JVM running for 13.864)
+2018-05-26 17:11:31,466[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-26 17:11:31,577[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-05-26 17:11:31,936[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.

@@ -9,7 +9,6 @@
         </div>
       </el-carousel-item>
     </el-carousel>
-
   </div>
 </template>
 <script>
@@ -18,7 +17,9 @@
   import {APP_TYPE} from '../../constant';
   export default{
     data: function () {
-      return {}
+      return {
+
+      }
     },
     computed: {
       ...mapGetters({
@@ -31,9 +32,9 @@
     methods: {
       openApp: function (app) {
         if (app.type === APP_TYPE.APP) {
-          this.$store.dispatch('taskbar/addAppDialog', app);
-        } else {
           this.$store.dispatch('taskbar/addBrowser', app);
+        } else {
+          this.$store.dispatch('taskbar/addAppDialog', app);
         }
       }
     },
@@ -47,10 +48,6 @@
         clearInterval(timer)
       }, 100)
     }
-//    ,
-//    created: function () {
-//      this.$store.commit('fisheye/fetch', this.$store);
-//    }
   }
 </script>
 <style>

@@ -1,7 +1,9 @@
 package org.alvin.opsdev.webos.commom.app.appicons;
 import java.util.Date;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.google.common.collect.Lists;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -28,5 +30,6 @@ public class AppIcons {
 	private Byte status;// 状态
 
 	//此处可添加查询显示辅助字段
+	private List<AppIcons> apps = Lists.newArrayList();
 
 }

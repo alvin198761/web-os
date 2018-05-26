@@ -18,7 +18,7 @@
       ...mapGetters({}),
     },
     mounted: function () {
-      this.$store.commit("app/init");
+
     },
     components: {Desktop, ContextMenu}
   }

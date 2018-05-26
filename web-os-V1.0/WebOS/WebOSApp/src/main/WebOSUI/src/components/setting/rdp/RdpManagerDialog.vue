@@ -1,35 +1,37 @@
 <template>
   <Explorer :id="'rdp'" title="Rdp 远程连接" :resize="false" :min="false" :max="false" :handleClose="handleClose">
-    <el-table slot="content" v-loading="loading" element-loading-text="拼命加载中"
-              :data="rdps"
-              style="width: 100%">
-      <el-table-column
-        prop="ip"
-        label="Ip"
-      >
-      </el-table-column>
-      <el-table-column
-        prop="port"
-        label="端口">
-      </el-table-column>
-      <el-table-column
-        prop="domain"
-        label="域名">
-      </el-table-column>
-      <el-table-column
-        prop="user"
-        label="用户名">
-      </el-table-column>
-      <el-table-column
-        label="操作">
-        <template scope="scope">
-          <el-button
-            size="small" type="text"
-            @click="handleConnect(scope.$index, scope.row)">连接
-          </el-button>
-        </template>
-      </el-table-column>
-    </el-table>
+    <div slot="content">
+      <el-table v-loading="loading" element-loading-text="拼命加载中"
+                :data="rdps"
+                style="width: 100%">
+        <el-table-column
+          prop="ip"
+          label="Ip"
+        >
+        </el-table-column>
+        <el-table-column
+          prop="port"
+          label="端口">
+        </el-table-column>
+        <el-table-column
+          prop="domain"
+          label="域名">
+        </el-table-column>
+        <el-table-column
+          prop="user"
+          label="用户名">
+        </el-table-column>
+        <el-table-column
+          label="操作">
+          <template scope="scope">
+            <el-button
+              size="small" type="text"
+              @click="handleConnect(scope.$index, scope.row)">连接
+            </el-button>
+          </template>
+        </el-table-column>
+      </el-table>
+    </div>
   </Explorer>
 </template>
 <script>
@@ -41,7 +43,8 @@
     data: function () {
       return {
         loading: false,
-        rdps: []
+        rdps: [],
+        text: ''
       }
     },
     computed: {

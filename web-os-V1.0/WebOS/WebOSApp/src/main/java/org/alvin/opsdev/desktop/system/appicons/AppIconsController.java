@@ -1,5 +1,7 @@
 package org.alvin.opsdev.desktop.system.appicons;
+
 import java.security.Principal;
+import java.util.Date;
 import java.util.List;
 
 import org.alvin.opsdev.desktop.system.common.PrincipalController;
@@ -29,7 +31,10 @@ public class AppIconsController extends PrincipalController {
 	 * @方法说明:新增应用程序图标记录
 	 **/
 	@RequestMapping("save")
-	public int save(@RequestBody AppIcons appIcons) {
+	public int save(@RequestBody AppIcons appIcons, Principal principal) {
+		appIcons.setCreate_time(new Date());
+		SessionUserSubject sessionUserSubject = getSubject(principal);
+		appIcons.setPublish_id(sessionUserSubject.getId());
 		return service.save(appIcons);
 	}
 
@@ -53,7 +58,7 @@ public class AppIconsController extends PrincipalController {
 	 * @方法说明:按条件查询分页应用程序图标列表
 	 **/
 	@RequestMapping("queryPage")
-	public Page<AppIcons> queryPage(@RequestBody AppIconsCond cond ){
+	public Page<AppIcons> queryPage(@RequestBody AppIconsCond cond) {
 		return service.queryPage(cond);
 	}
 
@@ -61,7 +66,7 @@ public class AppIconsController extends PrincipalController {
 	 * @方法说明:按条件查询不分页应用程序图标列表
 	 **/
 	@RequestMapping("queryList")
-	public List<AppIcons> queryList(@RequestBody AppIconsCond cond ){
+	public List<AppIcons> queryList(@RequestBody AppIconsCond cond) {
 		return service.queryList(cond);
 	}
 
@@ -77,16 +82,28 @@ public class AppIconsController extends PrincipalController {
 	 * @方法说明:按条件查询应用程序图标记录个数
 	 **/
 	@RequestMapping("queryCount")
-	public long queryCount(@RequestBody AppIconsCond cond ){
+	public long queryCount(@RequestBody AppIconsCond cond) {
 		return service.queryCount(cond);
 	}
 
+	/**
+	 * 左侧菜单
+	 *
+	 * @param principal
+	 * @return
+	 */
 	@RequestMapping(value = "sidebar", method = RequestMethod.GET)
 	public List<AppIcons> sidebarApps(Principal principal) {
 		SessionUserSubject userSubject = this.getSubject(principal);
 		return this.service.sidebarApps(userSubject.getId());
 	}
 
+	/**
+	 * 鱼眼球菜单
+	 *
+	 * @param principal
+	 * @return
+	 */
 	@RequestMapping(value = "fisheye", method = RequestMethod.GET)
 	public List<AppIcons> fishEyeApps(Principal principal) {
 		SessionUserSubject userSubject = this.getSubject(principal);

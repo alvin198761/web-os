@@ -22,7 +22,8 @@
     "vue-router": "^2.2.0",
     "vuex": "^2.1.2",
     "jquery": "^3.1.1",
-    "jquery-ui": "^1.12.1"
+    "jquery-ui": "^1.12.1",
+    "supermicro-ipmi": "git+https://github.com/phillipsnick/supermicro-ipmi.git"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
@@ -51,6 +52,7 @@
     "html-webpack-plugin": "^2.28.0",
     "http-proxy-middleware": "^0.17.3",
     "ignore-loader": "^0.1.2",
+    "iview": "^2.14.0",
     "json-loader": "^0.5.4",
     "less-loader": "^2.2.3",
     "mockjs": "1.0",

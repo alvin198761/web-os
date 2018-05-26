@@ -1,5 +1,5 @@
 <template>
-  <li :id="id" :shortcut="app.id">
+  <li :id="id" :shortcut="app.id" :title="app.tip">
     <div class="app-box">
       <el-badge :value="app.msgCount" class="item">
         <img style="cursor: pointer;" @click="openApp(app)" :src="app.icon"><span>{{app.title}}</span> <em

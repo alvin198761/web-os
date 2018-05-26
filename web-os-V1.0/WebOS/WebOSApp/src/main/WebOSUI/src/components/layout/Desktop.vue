@@ -22,7 +22,8 @@
       })
     },
     components: {
-      TaskBar, RootPanel
+      TaskBar,
+      RootPanel
     },
     mounted: function () {
       this.$store.dispatch("desktop/init");
