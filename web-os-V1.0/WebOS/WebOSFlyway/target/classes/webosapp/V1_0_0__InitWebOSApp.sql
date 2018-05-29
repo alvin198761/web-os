@@ -30,7 +30,7 @@ create table app_icon
    type                 tinyint comment '图标类型',
    title                char(20) comment '显示文本',
    tip                  varchar(100) comment '悬停提示',
-   icon                 varchar(200) comment '图标',
+   icon                 varchar(2000) comment '图标',
    publish_id           bigint comment '发布人',
    create_time          datetime comment '创建时间',
    parent_id            bigint comment '父节点',

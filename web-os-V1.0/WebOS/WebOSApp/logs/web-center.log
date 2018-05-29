@@ -1420,3 +1420,66 @@ Caused by: com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long fo
 2018-05-26 17:57:41,608[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
 2018-05-26 17:58:24,818[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
 2018-05-26 17:58:25,141[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-05-29 08:31:27,430[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 8592 (F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp\target\classes started by 动岚未来科技02 in F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp)
+2018-05-29 08:31:27,446[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-05-29 08:31:29,384[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-05-29 08:31:29,431[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-05-29 08:31:29,571[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-05-29 08:31:29,571[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-05-29 08:31:29,587[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-05-29 08:31:31,822[StartupInfoLogger.java:59][INFO]:Started AppMain in 4.97 seconds (JVM running for 11.864)
+2018-05-29 08:31:38,595[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-29 08:31:38,682[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-05-29 08:31:38,990[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-05-29 19:01:29,977[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 533708 (F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp\target\classes started by 动岚未来科技02 in F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp)
+2018-05-29 19:01:29,997[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-05-29 19:01:32,479[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-05-29 19:01:32,500[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-05-29 19:01:32,865[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-05-29 19:01:32,865[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-05-29 19:01:32,893[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-05-29 19:01:36,875[SpringApplication.java:842][ERROR]:Application run failed
+org.springframework.boot.web.server.WebServerException: Unable to start embedded Undertow
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServer.start(UndertowServletWebServer.java:162)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at org.alvin.opsdev.desktop.AppMain.main(AppMain.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.maven.AbstractRunMojo$LaunchRunner.run(AbstractRunMojo.java:496)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: java.net.BindException: Address already in use: bind
+	at io.undertow.Undertow.start(Undertow.java:249)
+	at org.springframework.boot.web.embedded.undertow.UndertowServletWebServer.start(UndertowServletWebServer.java:145)
+	... 16 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.xnio.nio.NioXnioWorker.createTcpConnectionServer(NioXnioWorker.java:190)
+	at org.xnio.XnioWorker.createStreamConnectionServer(XnioWorker.java:243)
+	at io.undertow.protocols.ssl.UndertowXnioSsl.createSslConnectionServer(UndertowXnioSsl.java:301)
+	at io.undertow.Undertow.start(Undertow.java:234)
+	... 17 common frames omitted
+2018-05-29 19:03:26,984[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 500264 (F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp\target\classes started by 动岚未来科技02 in F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp)
+2018-05-29 19:03:26,989[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-05-29 19:03:29,082[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-05-29 19:03:29,113[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-05-29 19:03:29,207[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-05-29 19:03:29,207[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-05-29 19:03:29,238[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-05-29 19:03:32,099[StartupInfoLogger.java:59][INFO]:Started AppMain in 5.776 seconds (JVM running for 14.355)
+2018-05-29 19:03:37,985[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-29 19:03:38,276[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-05-29 19:03:38,547[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.

@@ -14,7 +14,7 @@
         </div>
         <div class="dock_tool_list" id="dockToolList">
           <div class="dock_tool_item">
-            <a title="照相机" class="dock_tool_icon dock_tool_pinyin"
+            <a title="我的相册" class="dock_tool_icon dock_tool_pinyin"
                href="javascript:void(0)" @click="openCapture"></a>
             <a title="声音" cmd="Sound" class="dock_tool_icon dock_tool_sound"
                href="javascript:void(0)"></a>
@@ -32,7 +32,6 @@
 </template>
 <script>
   import {mapGetters, mapMutations} from 'vuex';
-  import SysSettingDialog from '../setting/SysSettingDialog';
   export default{
     data: function () {
       return {}
@@ -56,20 +55,31 @@
       },
       openSystemSettingDialog: function (e) {
         this.$store.commit('desktop/addComponent', {
-          component: SysSettingDialog,
+          component: require('../setting/SysSettingDialog'),
           options: {},
           userObject: {}
         })
       },
       openCapture: function () {
-        const app = {
-          id: 'capture_001',
-          type: 1,
-          title: '照相机',
-          icon: require('../../assets/icon/1.png'),
-          route_url: '#/capture'
-        }
-        this.$store.dispatch('taskbar/addBrowser', app);
+//        const app = {
+//          "id": -2,
+//          "type": 1,
+//          "title": "我的相册",
+//          "tip": "打开我的相册",
+//          "icon": require('../../assets/icon/1.png'),
+//          "publish_id": 0,
+//          "create_time": new Date(),
+//          "parent_id": 0,
+//          "route_url": "capture",
+//          "status": 1
+//        };
+
+        this.$store.commit('desktop/addComponent', {
+          component: require('../setting/MyPhoto.vue'),
+          options: {},
+          userObject: {}
+        })
+
       }
     }
   }

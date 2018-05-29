@@ -24,6 +24,7 @@ import '../node_modules/jquery-ui/ui/widgets/draggable';
 import '../node_modules/jquery-ui/ui/widgets/resizable';
 import '../node_modules/jquery-ui/ui/widgets/sortable';
 import './assets/js/jq-ie-plugin';
+import '../node_modules/cropperjs/dist/cropper.min.css';
 
 promise.polyfill();
 

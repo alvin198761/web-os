@@ -99,7 +99,7 @@ export default {
     ['taskbar/open_rdp']({rootState, commit, dispatch}, payload){
       if (rootState.taskbar.tasks.indexOf(payload.route_url) === -1) {
         commit('desktop/addComponent', {
-          component: require('../../components/setting/rdp/RdpManagerDialog.vue'),
+          component: require('../../components/setting/protocols/RdpManagerDialog.vue'),
           options: {},
           userObject: payload
         })
@@ -114,7 +114,7 @@ export default {
     ['taskbar/open_putty']({rootState, commit, dispatch}, payload){
       if (rootState.taskbar.tasks.indexOf(payload.route_url) === -1) {
         commit('desktop/addComponent', {
-          component: require( '../../components/setting/ssh/SSHManagerDialog.vue'),
+          component: require( '../../components/setting/protocols/SSHManagerDialog.vue'),
           options: {},
           userObject: payload
         })
@@ -129,12 +129,27 @@ export default {
     ['taskbar/open_vnc']({rootState, commit, dispatch}, payload){
       if (rootState.taskbar.tasks.indexOf(payload.route_url) === -1) {
         commit('desktop/addComponent', {
-          component: require('../../components/setting/vnc/VncManagerDialog.vue'),
+          component: require('../../components/setting/protocols/VncManagerDialog.vue'),
           options: {},
           userObject: payload
         })
         commit('taskbar/addTask', {
           id: 'vnc',
+          task: payload
+        })
+      }
+      dispatch('taskbar/activeTask', payload.route_url)
+    },
+    //打开vnc窗口
+    ['taskbar/open_ipmi']({rootState, commit, dispatch}, payload){
+      if (rootState.taskbar.tasks.indexOf(payload.route_url) === -1) {
+        commit('desktop/addComponent', {
+          component: require('../../components/setting/protocols/ImpiManagerDialog.vue'),
+          options: {},
+          userObject: payload
+        })
+        commit('taskbar/addTask', {
+          id: 'ipmi',
           task: payload
         })
       }
