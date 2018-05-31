@@ -1,14 +1,22 @@
 <template>
   <Explorer :id="'ssh'" title="ipmi 远程列表" :resize="false" :min="false" :max="false" :handleClose="handleClose">
-    <div slot="content" >
+    <div slot="content">
       <el-row :gutter="10" v-loading="loading" element-loading-text="拼命加载中" style="overflow-y: auto">
         <el-col :span="8" v-for="ipmi in ipmis">
           <el-card shadow="hover" style="text-align: center ;cursor: pointer">
             <img src="../../../assets/os/ipmi.jpg" width="100%"/>
-            <el-button-group >
-              <el-button size="mini">连接</el-button>
-              <el-button size="mini">编辑</el-button>
-              <el-button size="mini">删除</el-button>
+            <el-button-group>
+              <el-button size="mini" type="danger" icon="fa fa-power-off" title="关机"></el-button>
+              <el-button size="mini" type="success" icon="fa fa-play-circle" title="开机"></el-button>
+              <el-button size="mini" type="warning" icon="fa fa-spinner" title="重启"></el-button>
+              <el-dropdown>
+                <el-button size="mini" type="primary" icon="fa fa-ellipsis-h" title="更多操作"></el-button>
+                <el-dropdown-menu slot="dropdown">
+                  <el-dropdown-item>刷新状态</el-dropdown-item>
+                  <el-dropdown-item>删除</el-dropdown-item>
+                  <el-dropdown-item>编辑</el-dropdown-item>
+                </el-dropdown-menu>
+              </el-dropdown>
             </el-button-group>
           </el-card>
         </el-col>
@@ -30,10 +38,10 @@
     created: function () {
       this.loading = true;
       const _this = this;
-      this.$http.post('/api/protocols/queryList',JSON.stringify({
-        type:4
+      this.$http.post('/api/protocols/queryList', JSON.stringify({
+        type: 4
       })).then(function (res) {
-        _this.ipmis = res.data;
+        _this.ipmis = [1, 2, 3, 4];
         _this.loading = false;
       }).catch(function (res) {
         _this.ipmis = [];
