@@ -1,41 +1,41 @@
-²âÊÔ»·¾³£ºcentos 6.8 vm
+æµ‹è¯•ç¯å¢ƒï¼šcentos 6.8 vm
 	ip:192.168.0.104
 
-¸ü»» °²×°Ô´£º
+æ›´æ¢ å®‰è£…æºï¼š
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
 cd /etc/yum.repos.d/
 wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
 yum makecache
 yum -y update
 
-°²×°openjdk:°æ±¾×Ô¼ºÑ¡
+å®‰è£…openjdk:ç‰ˆæœ¬è‡ªå·±é€‰
 yum search jdk  
 yum install java-1.8.0-openjdk.x86_64 
 
-ÅäÖÃ»·¾³±äÁ¿£ºJRE_HOME
+é…ç½®ç¯å¢ƒå˜é‡ï¼šJRE_HOME
 vi /etc/profile
 
-export Ö®Ç°¼ÓÈë 
+export ä¹‹å‰åŠ å…¥ 
 JRE_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.el6_8.x86_64/jre
 PATH=$PATH:$JRE_HOME/bin
 
-Ê¹ÓÃ£ºsource /etc/profile ÉúĞ§
+ä½¿ç”¨ï¼šsource /etc/profile ç”Ÿæ•ˆ
 
-°²×°tomcat£º°æ±¾×ÔÑ¡£¬1.5 ÒÔÏÂÃ²ËÆ²»Ö§³Ö jre_homeµÄ·½Ê½
+å®‰è£…tomcatï¼šç‰ˆæœ¬è‡ªé€‰ï¼Œ1.5 ä»¥ä¸‹è²Œä¼¼ä¸æ”¯æŒ jre_homeçš„æ–¹å¼
 wget http://mirrors.hust.edu.cn/apache/tomcat/tomcat-7/v7.0.76/bin/apache-tomcat-7.0.76.tar.gz
-½âÑ¹£º tar -xf apache-tomcat-7.0.76.tar.gz
-·Åµ½Ä¿±êÎ»ÖÃ£ºmv apache-tomcat-7.0.76 /var/lib/tomcat7
-µ½ÔËĞĞÎ»ÖÃ£ºcd /var/lib/tomcat7/bin
-Æô¶¯£ºsh startup.sh
-Í£Ö¹£ºsh shutdown.sh
+è§£å‹ï¼š tar -xf apache-tomcat-7.0.76.tar.gz
+æ”¾åˆ°ç›®æ ‡ä½ç½®ï¼šmv apache-tomcat-7.0.76 /var/lib/tomcat7
+åˆ°è¿è¡Œä½ç½®ï¼šcd /var/lib/tomcat7/bin
+å¯åŠ¨ï¼šsh startup.sh
+åœæ­¢ï¼šsh shutdown.sh
 
 
-°²×°ÒÀÀµ¿â£º
+å®‰è£…ä¾èµ–åº“ï¼š
 yum -y install cairo-devel libjpeg-turbo-devel libjpeg-devel libpng-devel uuid-devel freerdp-devel pango-devel libssh2-devel libtelnet-devel libvncserver-devel pulseaudio-libs-devel openssl-devel libvorbis-devel
 
-°²×°gucamole
-ÏÂÔØ£ºwget http://downloads.sourceforge.net/project/guacamole/current/source/guacamole-server-0.9.9.tar.gz
-½âÑ¹£ºtar -xf guacamole-server-0.9.9.tar.gz
+å®‰è£…gucamole
+ä¸‹è½½ï¼šwget http://downloads.sourceforge.net/project/guacamole/current/source/guacamole-server-0.9.9.tar.gz
+è§£å‹ï¼štar -xf guacamole-server-0.9.9.tar.gz
 cd guacamole-server-0.9.9/       
 ./configure --with-init-dir=/etc/init.d
 make
@@ -43,34 +43,37 @@ make install
 ldconfig
 
 --------------------------
-°²×°gucamole¿Í»§¶Ë£º
+å®‰è£…gucamoleå®¢æˆ·ç«¯ï¼š
 wget http://downloads.sourceforge.net/project/guacamole/current/binary/guacamole-0.9.9.war
-²¿Êğ¿Í»§¶Ë£º
+éƒ¨ç½²å®¢æˆ·ç«¯ï¼š
 cp guacamole-0.9.9.war /var/lib/tomcat7/webapps/guacamole.war
 
 
-¿ªÆô·À»ğÇ½¶Ë¿Ú£º
+å¼€å¯é˜²ç«å¢™ç«¯å£ï¼š
 -A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
 
-ÔËĞĞÆô¶¯tomcat
+è¿è¡Œå¯åŠ¨tomcat
 
-·ÃÎÊµØÖ·£ºhttp://192.168.0.104:8080/guacamole
+è®¿é—®åœ°å€ï¼šhttp://192.168.0.104:8080/guacamole
 ----------------------
 
 
-´´½¨Ä¿Â¼£º
+åˆ›å»ºç›®å½•ï¼š
 mkdir /usr/share/tomcat7
 mkdir /usr/share/tomcat7/.guacamole
 mkdir /etc/guacamole
 cd /etc/guacamole/
 touch guacamole.properties
-ÅäÖÃÄÚÈİ£º
+é…ç½®å†…å®¹ï¼š
 guacd-hostname: localhost
 guacd-port:     4822
 
+
+ln -s /etc/guacamole/guacamole.properties /usr/share/tomcat6/.guacamole/
+
 touch user-mapping.xml
 
-ÅäÖÃÄÚÈİ£º
+é…ç½®å†…å®¹ï¼š
  <user-mapping>
                 <authorize username="admin" password="123456">
                         <connection name="vnc">
@@ -97,5 +100,5 @@ touch user-mapping.xml
                 </authorize>
         </user-mapping>
 
- ÖØÆôtomcat
+ é‡å¯tomcat
 /etc/init.d/guacd restart
