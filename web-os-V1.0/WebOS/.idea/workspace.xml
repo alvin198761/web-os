@@ -16,6 +16,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AppIconsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebOSApp/src/main/java/org/alvin/opsdev/desktop/system/appicons/AppIconsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="61" column="8" lean-forward="true" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#712#739#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Protocols.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Common/src/main/java/org/alvin/opsdev/webos/commom/app/protocols/Protocols.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -34,19 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebOSApp/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProtocolsController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProtocolsController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebOSApp/src/main/java/org/alvin/opsdev/desktop/system/protocols/ProtocolsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
+            <state relative-caret-position="450">
               <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
               <folding>
                 <element signature="e#1928#1929#0" expanded="true" />
@@ -69,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProtocolsService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProtocolsService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebOSApp/src/main/java/org/alvin/opsdev/desktop/system/protocols/ProtocolsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
+            <state relative-caret-position="737">
               <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
               <folding>
                 <element signature="e#1507#1508#0" expanded="true" />
@@ -133,7 +137,7 @@
       <find>com.mysql.cj.jdbc.Driver</find>
       <find>mysql</find>
       <find>@Controller</find>
-      <find>return &quot;/&quot;;</find>
+      <find />
       <find>&quot;index&quot;</find>
       <find>SessionUserSubject</find>
       <find>AppIconsController</find>
@@ -279,42 +283,13 @@
             <path>
               <item name="WebOS" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebOS" type="462c0819:PsiDirectoryNode" />
-              <item name="Common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebOS" type="462c0819:PsiDirectoryNode" />
-              <item name="Common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebOS" type="462c0819:PsiDirectoryNode" />
-              <item name="Common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebOS" type="462c0819:PsiDirectoryNode" />
-              <item name="Common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebOS" type="462c0819:PsiDirectoryNode" />
-              <item name="Common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commom" type="462c0819:PsiDirectoryNode" />
+              <item name="WebOSApp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebOS" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebOS" type="462c0819:PsiDirectoryNode" />
               <item name="WebOSApp" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebOS" type="b2602c69:ProjectViewProjectNode" />
@@ -366,18 +341,6 @@
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="desktop" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebOS" type="462c0819:PsiDirectoryNode" />
-              <item name="WebOSApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="desktop" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="protocols" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebOS" type="b2602c69:ProjectViewProjectNode" />
@@ -571,16 +534,15 @@
       <workItem from="1527642195126" duration="248000" />
       <workItem from="1527771782585" duration="1267000" />
       <workItem from="1527813632432" duration="597000" />
-      <workItem from="1528507853290" duration="8441000" />
+      <workItem from="1528507853290" duration="10742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42346000" />
+    <option name="totallyTimeSpent" value="44647000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5026652" side_tool="true" weight="0.32897604" />
@@ -859,16 +821,6 @@
     <entry file="file://$PROJECT_DIR$/WebOSApp/src/main/resources/config/application-dev.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebOSApp/src/main/java/org/alvin/opsdev/desktop/system/appicons/AppIconsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="23" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebOSApp/src/main/resources/config/application-prod.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -952,9 +904,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebOSApp/src/main/java/org/alvin/opsdev/desktop/system/protocols/ProtocolsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+          <folding>
+            <element signature="e#1507#1508#0" expanded="true" />
+            <element signature="e#1540#1541#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebOSApp/src/main/java/org/alvin/opsdev/desktop/system/appicons/AppIconsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="61" column="8" lean-forward="true" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#712#739#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebOSApp/src/main/java/org/alvin/opsdev/desktop/system/protocols/ProtocolsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
+        <state relative-caret-position="450">
           <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
           <folding>
             <element signature="e#1928#1929#0" expanded="true" />
@@ -963,17 +937,6 @@
             <element signature="e#2138#2139#0" expanded="true" />
             <element signature="e#2420#2421#0" expanded="true" />
             <element signature="e#2458#2459#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebOSApp/src/main/java/org/alvin/opsdev/desktop/system/protocols/ProtocolsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-          <folding>
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1540#1541#0" expanded="true" />
           </folding>
         </state>
       </provider>

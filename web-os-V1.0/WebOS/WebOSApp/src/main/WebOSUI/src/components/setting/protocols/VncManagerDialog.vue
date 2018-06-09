@@ -8,14 +8,14 @@
             <img src="../../../assets/os/linux.jpg" width="100%"/>
             <el-button-group>
               <el-button size="mini">连接</el-button>
-              <el-button size="mini">编辑</el-button>
-              <el-button size="mini">删除</el-button>
+              <el-button size="mini" @click="doEdit(vnc)">编辑</el-button>
+              <el-button size="mini" @click="doDelete(vnc)">删除</el-button>
             </el-button-group>
           </el-card>
         </el-col>
         <el-col :span="8">
           <el-card shadow="hover" style="text-align: center ;cursor: pointer" title="添加VNC桌面">
-            <i class="fa fa-plus" style="font-size: 145px ;color: #7D7D7D" @click="()=> { this.mode='edit' ;  this.form= this.initForm()}"/>
+            <i class="fa fa-plus" style="font-size: 145px ;color: #7D7D7D" @click="doAdd"/>
           </el-card>
         </el-col>
       </el-row>
@@ -150,6 +150,45 @@
           name: ''
         }
       },
+      doEdit(item){
+        this.mode = 'edit';
+        this.dialogMode = 'update';
+        this.form = {...item};
+      },
+      doAdd(){
+        this.mode = 'edit';
+        this.form = this.initForm();
+        this.dialogMode = 'save';
+      },
+      doDelete(item){
+        const that = this;
+        this.$confirm('此操作将删除一个连接, 是否继续?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning',
+        }).then(() => {
+          that.deleteItem(item);
+        }).catch(() => {
+
+        });
+      },
+      deleteItem(item){
+        const that = this;
+        this.$http.delete("/api/protocols/delete", {
+          params: {ids: [item.id]}
+        }).then(res => {
+          that.$message({
+            type: 'success',
+            message: '删除成功!'
+          });
+          that.refresh()
+        }).catch(err => {
+          that.$message({
+            type: 'error',
+            message: '删除出错!'
+          });
+        })
+      }
     },
     components: {
       Explorer
