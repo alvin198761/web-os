@@ -67,7 +67,6 @@ public class ProtocolsService {
 	 **/
 	public List<Protocols> queryList(ProtocolsCond cond) {
 		return dao.queryList(cond);
-//		return Lists.newArrayList(Protocols.createDefault(1), Protocols.createDefault(2), Protocols.createDefault(3));
 	}
 
 	/**

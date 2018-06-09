@@ -15,7 +15,7 @@
         </el-col>
         <el-col :span="8">
           <el-card shadow="hover" style="text-align: center ;cursor: pointer" title="添加VNC桌面">
-            <i class="fa fa-plus" style="font-size: 145px ;color: #7D7D7D" @click="()=>mode='edit'"/>
+            <i class="fa fa-plus" style="font-size: 145px ;color: #7D7D7D" @click="()=> { this.mode='edit' ;  this.form= this.initForm()}"/>
           </el-card>
         </el-col>
       </el-row>

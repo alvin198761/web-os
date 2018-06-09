@@ -1547,3 +1547,14 @@ Caused by: java.net.BindException: Address already in use: bind
 2018-06-09 15:42:10,144[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
 2018-06-09 15:42:10,303[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
 2018-06-09 15:42:10,574[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-06-09 16:29:42,757[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 591244 (F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-V1.0\WebOS\WebOSApp)
+2018-06-09 16:29:42,759[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-06-09 16:29:44,332[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-06-09 16:29:44,350[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-06-09 16:29:44,429[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-06-09 16:29:44,429[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-06-09 16:29:44,455[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-06-09 16:29:46,777[StartupInfoLogger.java:59][INFO]:Started AppMain in 4.521 seconds (JVM running for 12.147)
+2018-06-09 16:29:57,439[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-09 16:29:57,536[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-06-09 16:29:57,825[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.

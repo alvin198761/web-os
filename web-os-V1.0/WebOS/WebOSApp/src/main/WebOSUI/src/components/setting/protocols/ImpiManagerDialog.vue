@@ -23,7 +23,7 @@
         </el-col>
         <el-col :span="8">
           <el-card shadow="hover" style="text-align: center ;cursor: pointer" title="添加Ipmi连接">
-            <i class="fa fa-plus" style="font-size: 145px ;color: #7D7D7D" @click="()=>mode='edit'"/>
+            <i class="fa fa-plus" style="font-size: 145px ;color: #7D7D7D" @click="()=> { this.mode='edit' ;  this.form= this.initForm()}"/>
           </el-card>
         </el-col>
       </el-row>
@@ -54,7 +54,7 @@
                 </el-switch>
               </el-form-item>
               <el-form-item style="text-align: right">
-                <el-button @click="show = false">取消</el-button>
+                <el-button  @click="()=>mode='list'">取消</el-button>
                 <el-button type="primary" @click="save()">确定</el-button>
               </el-form-item>
             </el-col>
