@@ -66,8 +66,8 @@ public class ProtocolsService {
 	 * @方法说明:按条件查询不分页远程协议列表(使用范型)
 	 **/
 	public List<Protocols> queryList(ProtocolsCond cond) {
-//		return dao.queryList(cond);
-		return Lists.newArrayList(Protocols.createDefault(1), Protocols.createDefault(2), Protocols.createDefault(3));
+		return dao.queryList(cond);
+//		return Lists.newArrayList(Protocols.createDefault(1), Protocols.createDefault(2), Protocols.createDefault(3));
 	}
 
 	/**

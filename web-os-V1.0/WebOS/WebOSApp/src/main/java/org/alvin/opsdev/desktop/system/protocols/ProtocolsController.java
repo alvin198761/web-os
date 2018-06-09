@@ -1,6 +1,11 @@
 package org.alvin.opsdev.desktop.system.protocols;
+
+import java.security.Principal;
+import java.util.Date;
 import java.util.List;
 
+import org.alvin.opsdev.desktop.system.common.PrincipalController;
+import org.alvin.opsdev.desktop.system.common.acl.SessionUserSubject;
 import org.alvin.opsdev.webos.commom.Page;
 import org.alvin.opsdev.webos.commom.app.protocols.Protocols;
 import org.alvin.opsdev.webos.commom.app.protocols.ProtocolsCond;
@@ -19,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 @RequestMapping("/api/protocols")
-public class ProtocolsController {
+public class ProtocolsController extends PrincipalController {
 	@SuppressWarnings("unused")
 	private final Log logger = LogFactory.getLog(getClass());
 	@Autowired
@@ -29,7 +34,10 @@ public class ProtocolsController {
 	 * @方法说明:新增远程协议记录
 	 **/
 	@RequestMapping("save")
-	public int save(@RequestBody Protocols protocols) {
+	public int save(@RequestBody Protocols protocols, Principal principal) {
+		SessionUserSubject sessionUserSubject = getSubject(principal);
+		protocols.setAuthor(sessionUserSubject.getId());
+		protocols.setCreate_time(new Date());
 		return service.save(protocols);
 	}
 
@@ -53,7 +61,7 @@ public class ProtocolsController {
 	 * @方法说明:按条件查询分页远程协议列表
 	 **/
 	@RequestMapping("queryPage")
-	public Page<Protocols> queryPage(@RequestBody ProtocolsCond cond ){
+	public Page<Protocols> queryPage(@RequestBody ProtocolsCond cond) {
 		return service.queryPage(cond);
 	}
 
@@ -61,7 +69,7 @@ public class ProtocolsController {
 	 * @方法说明:按条件查询不分页远程协议列表
 	 **/
 	@RequestMapping("queryList")
-	public List<Protocols> queryList(@RequestBody ProtocolsCond cond ){
+	public List<Protocols> queryList(@RequestBody ProtocolsCond cond) {
 		return service.queryList(cond);
 	}
 
@@ -77,7 +85,7 @@ public class ProtocolsController {
 	 * @方法说明:按条件查询远程协议记录个数
 	 **/
 	@RequestMapping("queryCount")
-	public long queryCount(@RequestBody ProtocolsCond cond ){
+	public long queryCount(@RequestBody ProtocolsCond cond) {
 		return service.queryCount(cond);
 	}
 }
