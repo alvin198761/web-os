@@ -7,7 +7,7 @@
           <el-card shadow="hover" style="text-align: center ;cursor: pointer">
             <img src="../../../assets/os/windows.jpg" width="100%"/>
             <el-button-group>
-              <el-button size="mini">连接</el-button>
+              <el-button size="mini" @click="handleConnect(index,rdp)">连接</el-button>
               <el-button size="mini" @click="doEdit(rdp)">编辑</el-button>
               <el-button size="mini" @click="doDelete(rdp)">删除</el-button>
             </el-button-group>
@@ -115,9 +115,8 @@
         this.$store.commit('taskbar/removeTask', this.userObject)
       },
       handleConnect: function (index, row) {
-        console.log(row)
         var app = {
-          id: 'rdp01',
+          id: 'rdp' + row.id,
           title: '远程 rdp',
           url: '/guacamole.html?id=' + row.id + "&type=rdp",
           icon: require('../../../assets/icon/sidebar/rdp.png')

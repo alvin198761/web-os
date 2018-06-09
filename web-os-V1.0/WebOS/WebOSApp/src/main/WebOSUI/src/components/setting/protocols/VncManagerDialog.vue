@@ -3,11 +3,11 @@
     <div slot="content">
       <el-row v-if="mode=='list'" :gutter="10" v-loading="loading" element-loading-text="拼命加载中"
               style="overflow-y: auto ; margin: 5px 5px 5px 0px">
-        <el-col :span="8" v-for="vnc in vncs" style="margin-bottom: 10px">
+        <el-col :span="8" v-for="(vnc,index) in vncs" style="margin-bottom: 10px">
           <el-card shadow="hover" style="text-align: center ;cursor: pointer">
             <img src="../../../assets/os/linux.jpg" width="100%"/>
             <el-button-group>
-              <el-button size="mini">连接</el-button>
+              <el-button size="mini" @click="handleConnect(index,vnc)">连接</el-button>
               <el-button size="mini" @click="doEdit(vnc)">编辑</el-button>
               <el-button size="mini" @click="doDelete(vnc)">删除</el-button>
             </el-button-group>
@@ -113,7 +113,7 @@
       },
       handleConnect: function (index, row) {
         var app = {
-          id: 'vnc01',
+          id: 'vnc' + row.id,
           title: '远程 vnc',
           url: '/guacamole.html?id=' + row.id + "&type=vnc",
           icon: require('../../../assets/icon/sidebar/vnc.png')
@@ -188,6 +188,15 @@
             message: '删除出错!'
           });
         })
+      },
+      connect(item){
+        var app = {
+          id: 'vnc0' + item.id,
+          title: '远程 vnc',
+          url: '/guacamole.html?id=' + item.id + "&type=vnc",
+          icon: require('../../../assets/icon/sidebar/vnc.png')
+        }
+        this.$store.dispatch('taskbar/addBrowser', app);
       }
     },
     components: {

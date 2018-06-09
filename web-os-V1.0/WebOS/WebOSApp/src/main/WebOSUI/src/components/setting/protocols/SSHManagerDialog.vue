@@ -3,11 +3,11 @@
     <div slot="content">
       <el-row v-if="mode == 'list'" :gutter="10" v-loading="loading" element-loading-text="拼命加载中"
               style="overflow-y: auto ; margin: 5px 5px 5px 0px">
-        <el-col :span="8" v-for="ssh in sshs" style="margin-bottom: 10px">
+        <el-col :span="8" v-for="(ssh,index) in sshs" style="margin-bottom: 10px">
           <el-card shadow="hover" style="text-align: center ;cursor: pointer">
             <img src="../../../assets/os/ssh.jpg" width="100%"/>
             <el-button-group>
-              <el-button size="mini">连接</el-button>
+              <el-button size="mini" @click="handleConnect(index,ssh)">连接</el-button>
               <el-button size="mini" @click="doEdit(ssh)">编辑</el-button>
               <el-button size="mini" @click="doDelete(ssh)">删除</el-button>
             </el-button-group>
@@ -108,7 +108,7 @@
       },
       handleConnect: function (index, row) {
         var app = {
-          id: 'ssh01',
+          id: 'ssh' + row.id ,
           title: '远程ssh',
           route_url: '/guacamole.html?id=' + row.id + "&type=ssh",
           icon: require('../../../assets/icon/sidebar/putty.png')

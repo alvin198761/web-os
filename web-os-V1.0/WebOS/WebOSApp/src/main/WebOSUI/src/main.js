@@ -48,3 +48,4 @@ new Vue({
   template: '<App/>',
   components: {App}
 });
+//    "supermicro-ipmi": "git+https://github.com/phillipsnick/supermicro-ipmi.git",

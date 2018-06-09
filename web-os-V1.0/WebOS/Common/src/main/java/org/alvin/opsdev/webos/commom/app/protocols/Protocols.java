@@ -29,19 +29,5 @@ public class Protocols {
 
 	//此处可添加查询显示辅助字段
 
-	public static Protocols createDefault(long id){
-		Protocols protocols = new Protocols();
-		protocols.setId(id);
-		protocols.setDomain("domain");
-		protocols.setAuthor(1L);
-		protocols.setCreate_time(new Date());
-		protocols.setIp("127.0.0.1");
-		protocols.setPassword("111");
-		protocols.setPort(1234);
-		protocols.setStatus((byte)0);
-		protocols.setType((byte)1);
-		protocols.setUser("alvin");
-		return protocols;
-	}
 
 }

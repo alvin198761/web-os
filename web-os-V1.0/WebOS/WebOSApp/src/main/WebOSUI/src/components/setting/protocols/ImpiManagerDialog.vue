@@ -7,15 +7,23 @@
           <el-card shadow="hover" style="text-align: center ;cursor: pointer">
             <img src="../../../assets/os/ipmi.jpg" width="100%"/>
             <el-button-group>
-              <el-button size="mini" type="danger" icon="fa fa-power-off" title="关机"></el-button>
-              <el-button size="mini" type="success" icon="fa fa-play-circle" title="开机"></el-button>
-              <el-button size="mini" type="warning" icon="fa fa-spinner" title="重启"></el-button>
+              <el-button size="mini" type="danger" icon="fa fa-power-off" title="关机"
+                         @click="doPowerOff(ipmi)"></el-button>
+              <el-button size="mini" type="success" icon="fa fa-play-circle" title="开机"
+                         @click="doPowerOn(ipmi)"></el-button>
+              <el-button size="mini" type="warning" icon="fa fa-spinner" title="重启" @click="doReboot(ipmi)"></el-button>
               <el-dropdown>
                 <el-button size="mini" type="primary" icon="fa fa-ellipsis-h" title="更多操作"></el-button>
                 <el-dropdown-menu slot="dropdown">
-                  <el-dropdown-item>刷新状态</el-dropdown-item>
-                  <el-dropdown-item><div @click="doDelete(ipmi)">删除</div></el-dropdown-item>
-                  <el-dropdown-item ><div @click="doEdit(ipmi)">编辑</div></el-dropdown-item>
+                  <el-dropdown-item>
+                    <div @click="doQueryStatus(ipmi)">刷新状态</div>
+                  </el-dropdown-item>
+                  <el-dropdown-item>
+                    <div @click="doDelete(ipmi)">删除</div>
+                  </el-dropdown-item>
+                  <el-dropdown-item>
+                    <div @click="doEdit(ipmi)">编辑</div>
+                  </el-dropdown-item>
                 </el-dropdown-menu>
               </el-dropdown>
             </el-button-group>
@@ -67,6 +75,7 @@
 <script>
   import Explorer from '../../commons/Explorer.vue';
   import http from '../../../plugins/http';
+  import {getServer, impiLogin, getCurrentPowerState, setPowerAction} from '../ipmi/IpmiService';
   export default {
     props: ['userObject', 'options', 'index'],
     data: function () {
@@ -195,6 +204,70 @@
             type: 'error',
             message: '删除出错!'
           });
+        })
+      },
+      //关机
+      doPowerOff(item){
+        this.doSetStatus(item, 0);
+      },
+      doPowerOn(item){
+        this.doSetStatus(item, 1);
+      },
+      doReboot(item){
+        this.doSetStatus(item, 3);
+      },
+      doQueryStatus(item){
+        var impi = getServer(item.ip, item.port, item.user, item.password);
+        if (!impi) {
+          this.$message({
+            type: "error",
+            message: "连接失败"
+          });
+        }
+        impiLogin(impi, function (err) {
+          if (err) {
+            this.$message({
+              type: "error",
+              message: err
+            });
+            return;
+          }
+          getCurrentPowerState(impi, action, function (err) {
+            if (err) {
+              this.$message({
+                type: "error",
+                message: err
+              });
+              return;
+            }
+          })
+        })
+      },
+      doSetStatus(item, action){
+        var impi = getServer(item.ip, item.port, item.user, item.password);
+        if (!impi) {
+          this.$message({
+            type: "error",
+            message: "连接失败"
+          });
+        }
+        impiLogin(impi, function (err) {
+          if (err) {
+            this.$message({
+              type: "error",
+              message: err
+            });
+            return;
+          }
+          setPowerAction(impi, action, function (err) {
+            if (err) {
+              this.$message({
+                type: "error",
+                message: err
+              });
+              return;
+            }
+          })
         })
       }
     },
