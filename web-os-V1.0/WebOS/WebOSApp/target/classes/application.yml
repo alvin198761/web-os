@@ -41,7 +41,7 @@ http:
   port: 4005
 guacamole:
   server:
-    ip: 192.168.0.104
+    ip: localhost
     port: 4822
 
 img:

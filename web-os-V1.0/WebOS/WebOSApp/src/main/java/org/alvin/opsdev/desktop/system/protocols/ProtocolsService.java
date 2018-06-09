@@ -1,6 +1,8 @@
 package org.alvin.opsdev.desktop.system.protocols;
+
 import java.util.List;
 
+import com.google.common.collect.Lists;
 import org.alvin.opsdev.webos.commom.Page;
 import org.alvin.opsdev.webos.commom.app.protocols.Protocols;
 import org.alvin.opsdev.webos.commom.app.protocols.ProtocolsCond;
@@ -64,7 +66,8 @@ public class ProtocolsService {
 	 * @方法说明:按条件查询不分页远程协议列表(使用范型)
 	 **/
 	public List<Protocols> queryList(ProtocolsCond cond) {
-		return dao.queryList(cond);
+//		return dao.queryList(cond);
+		return Lists.newArrayList(Protocols.createDefault(1), Protocols.createDefault(2), Protocols.createDefault(3));
 	}
 
 	/**
