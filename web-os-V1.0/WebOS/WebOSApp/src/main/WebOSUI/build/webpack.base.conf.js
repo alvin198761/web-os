@@ -61,5 +61,11 @@ module.exports = {
       }
       // {test: /\.css$/, loader: 'ignore-loader'}
     ]
+  },
+  node :{
+    // console: 'empty',
+    fs: 'empty',
+    // net: 'empty',
+    // tls: 'empty'
   }
 }

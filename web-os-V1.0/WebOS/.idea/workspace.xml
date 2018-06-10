@@ -260,7 +260,7 @@
       <path value="$PROJECT_DIR$/WebOSApp/src/main/WebOSUI/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="371" />
     <option name="y" value="23" />
     <option name="width" value="1936" />
@@ -271,8 +271,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -352,6 +350,8 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -534,15 +534,16 @@
       <workItem from="1527771782585" duration="1267000" />
       <workItem from="1527813632432" duration="597000" />
       <workItem from="1528507853290" duration="12208000" />
-      <workItem from="1528540819853" duration="626000" />
+      <workItem from="1528540819853" duration="811000" />
+      <workItem from="1528592318139" duration="674000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46739000" />
+    <option name="totallyTimeSpent" value="47598000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
@@ -555,17 +556,17 @@
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.39978212" />
+      <window_info active="true" anchor="bottom" id="Debug" order="8" visible="true" weight="0.39978212" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49733475" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49733475" weight="0.32897604" />
       <window_info anchor="bottom" id="Spring" order="13" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.2867804" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.28997868" />
       <window_info anchor="right" id="Bean Validation" order="7" />
       <window_info id="Web" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="4" />

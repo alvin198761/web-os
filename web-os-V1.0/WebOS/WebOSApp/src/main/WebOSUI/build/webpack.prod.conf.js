@@ -77,7 +77,8 @@ var webpackConfig = merge(baseWebpackConfig, {
       $: "jquery",
       jQuery: "jquery",
       "window.jQuery": "jquery"
-    })
+    }),
+    new webpack.IgnorePlugin(/regenerator|nodent|js\-beautify/, /ajv/),
   ]
 })
 
