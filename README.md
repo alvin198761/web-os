@@ -1,5 +1,10 @@
 # V 1.0 描述
 在 V 0.3 的基础上将app死数据动态化，
+web-os-V1.0: 1.0 版本的根目录
+    WebOS 项目跟目录
+        WebOSApp java 项目位置
+            src/main/WebOSUI/  web项目代码位置 
+
 1. 实现 【新建】 功能菜单
     <br/>1.1 实现新建应用
     <br/>1.2 实现新建文件夹
