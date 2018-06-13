@@ -1,6 +1,8 @@
 <template>
   <div id="win10" style="background: url('../../static/img/wallpapers/main.jpg')">
-    <Desktop></Desktop>
+    <!--<Desktop></Desktop>-->
+    <!--<DesktopSunshine></DesktopSunshine>-->
+    <DesktopUniverse></DesktopUniverse>
     <StartMenu></StartMenu>
     <CommandCenter></CommandCenter>
     <TaskBar></TaskBar>
@@ -9,6 +11,8 @@
 
 <script>
   import Desktop from './layout/Desktop.vue';
+  import DesktopSunshine from './layout/DesktopSunshine.vue';
+  import DesktopUniverse from './layout/DesktopUniverse.vue';
   import StartMenu from './layout/StartMenu.vue';
   import CommandCenter from './layout/CommandCenter.vue';
   import TaskBar from './layout/TaskBar.vue';
@@ -44,7 +48,7 @@
       }
     },
     components: {
-      Desktop, StartMenu, CommandCenter, TaskBar
+      Desktop, StartMenu, CommandCenter, TaskBar,DesktopUniverse,DesktopSunshine
     }
   }
 </script>

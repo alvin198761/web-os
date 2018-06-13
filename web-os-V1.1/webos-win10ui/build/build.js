@@ -14,6 +14,21 @@ const webpackConfig = require('./webpack.prod.conf')
 const spinner = ora('building for production...')
 spinner.start()
 
+
+var shell = require('shelljs')
+shell.rm('-rf', assetsPath)
+shell.mkdir('-p', assetsPath +'/static')
+shell.config.silent = true
+shell.cp('-R', 'static/*', '../resources/static/static')
+shell.cp('-R', 'favicon.ico', "../resources/static/favicon.ico")
+
+//----
+shell.mkdir('-p', assetsPath + "/guacamole")
+shell.cp('-R', 'guacamole/*', assetsPath + "/guacamole");
+shell.cp('-R', 'guacamole.html', "../resources/templates/guacamole.ftl")
+shell.cp('-R', 'login.html', "../resources/templates/login.ftl")
+shell.mv("../resources/templates/guacamole.html","../resources/templates/guacamole.ftl");
+
 rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
   if (err) throw err
   webpack(webpackConfig, (err, stats) => {
