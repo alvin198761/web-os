@@ -461,6 +461,36 @@ window.Win10 = {
         //设置默认右键菜单
         Win10.setContextMenu('#win10',true);
         // Win10.setContextMenu('#win10>.desktop',[
+      Win10.setContextMenu('#desktop',[
+        ['<i class="fa fa-fw fa-star"></i> 收藏本页',function () {
+          var url = window.location;
+          var title = document.title;
+          var ua = navigator.userAgent.toLowerCase();
+          if (ua.indexOf("360se") > -1) {
+            layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
+          }
+          else if (ua.indexOf("msie 8") > -1) {
+            window.external.AddToFavoritesBar(url, title); //IE8
+          }
+          else if (document.all) {
+            try{
+              window.external.addFavorite(url, title);
+            }catch(e){
+              layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
+            }
+          }
+          else if (window.sidebar) {
+            window.sidebar.addPanel(title, url, "");
+          }
+          else {
+            layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
+          }
+        }],
+        ['<i class="fa fa-fw fa-window-maximize"></i> '+Win10.lang('进入全屏','Enable Full Screen'),function () {Win10.enableFullScreen()}],
+        ['<i class="fa fa-fw fa-window-restore"></i> '+Win10.lang('退出全屏','Disable Full Screen'),function () {Win10.disableFullScreen()}],
+        '|',
+        ['<i class="fa fa-fw fa-info-circle"></i> '+Win10.lang('关于','About Us'),function () {Win10.aboutUs()}],
+      ]);
 
         Win10.setContextMenu('#win10_btn_group_middle',[
             ['<i class="fa fa-fw fa-window-maximize"></i> '+Win10.lang('全部显示','Show All Windows'),function () {Win10.showWins()}],
@@ -886,11 +916,3 @@ window.Win10 = {
     }
 };
 
-
-$(function () {
-    Win10._init();
-    for(var i in Win10._handleReady){
-        var handle=Win10._handleReady[i];
-        handle();
-    }
-});

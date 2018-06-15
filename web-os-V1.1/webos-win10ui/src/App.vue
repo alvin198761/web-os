@@ -9,7 +9,10 @@
 
   export default {
     name: 'App',
-    components: {RootPane}
+    components: {RootPane},
+    mounted(){
+      this.$store.dispatch("app/initApp");
+    }
   }
 </script>
 

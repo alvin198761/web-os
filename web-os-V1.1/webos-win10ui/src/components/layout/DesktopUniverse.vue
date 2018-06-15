@@ -251,37 +251,37 @@
       initHeader();
       initAnimation();
       addListeners();
-      Win10.setContextMenu('#desktop',[
-        ['<i class="fa fa-fw fa-star"></i> 收藏本页',function () {
-          var url = window.location;
-          var title = document.title;
-          var ua = navigator.userAgent.toLowerCase();
-          if (ua.indexOf("360se") > -1) {
-            layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
-          }
-          else if (ua.indexOf("msie 8") > -1) {
-            window.external.AddToFavoritesBar(url, title); //IE8
-          }
-          else if (document.all) {
-            try{
-              window.external.addFavorite(url, title);
-            }catch(e){
-              layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
-            }
-          }
-          else if (window.sidebar) {
-            window.sidebar.addPanel(title, url, "");
-          }
-          else {
-            layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
-          }
-        }],
-        ['<i class="fa fa-fw fa-window-maximize"></i> '+Win10.lang('设置主题','Enable Full Screen'),function () { console.log('主题')}],
-        ['<i class="fa fa-fw fa-window-maximize"></i> '+Win10.lang('进入全屏','Enable Full Screen'),function () {Win10.enableFullScreen()}],
-        ['<i class="fa fa-fw fa-window-restore"></i> '+Win10.lang('退出全屏','Disable Full Screen'),function () {Win10.disableFullScreen()}],
-        '|',
-        ['<i class="fa fa-fw fa-info-circle"></i> '+Win10.lang('关于','About Us'),function () {Win10.aboutUs()}],
-      ]);
+//      Win10.setContextMenu('#desktop',[
+//        ['<i class="fa fa-fw fa-star"></i> 收藏本页',function () {
+//          var url = window.location;
+//          var title = document.title;
+//          var ua = navigator.userAgent.toLowerCase();
+//          if (ua.indexOf("360se") > -1) {
+//            layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
+//          }
+//          else if (ua.indexOf("msie 8") > -1) {
+//            window.external.AddToFavoritesBar(url, title); //IE8
+//          }
+//          else if (document.all) {
+//            try{
+//              window.external.addFavorite(url, title);
+//            }catch(e){
+//              layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
+//            }
+//          }
+//          else if (window.sidebar) {
+//            window.sidebar.addPanel(title, url, "");
+//          }
+//          else {
+//            layer.alert(Win10.lang('您的浏览器不支持,请按 Ctrl+D 手动收藏!','Your browser does not support, please press Ctrl+D to manual collection!'));
+//          }
+//        }],
+//        ['<i class="fa fa-fw fa-window-maximize"></i> '+Win10.lang('设置主题','Enable Full Screen'),function () { console.log('主题')}],
+//        ['<i class="fa fa-fw fa-window-maximize"></i> '+Win10.lang('进入全屏','Enable Full Screen'),function () {Win10.enableFullScreen()}],
+//        ['<i class="fa fa-fw fa-window-restore"></i> '+Win10.lang('退出全屏','Disable Full Screen'),function () {Win10.disableFullScreen()}],
+//        '|',
+//        ['<i class="fa fa-fw fa-info-circle"></i> '+Win10.lang('关于','About Us'),function () {Win10.aboutUs()}],
+//      ]);
     },
     methods: {},
     components: {}

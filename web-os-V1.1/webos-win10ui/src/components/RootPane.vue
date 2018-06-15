@@ -1,8 +1,11 @@
 <template>
   <div id="win10" style="background: url('../../static/img/wallpapers/main.jpg')">
-    <!--<Desktop></Desktop>-->
-    <!--<DesktopSunshine></DesktopSunshine>-->
-    <DesktopUniverse></DesktopUniverse>
+    <Desktop v-if="theme == null || theme == 0"></Desktop>
+    <DesktopSunshine v-if="theme == 1"></DesktopSunshine>
+    <DesktopUniverse v-if="theme == 2"></DesktopUniverse>
+    <!--<keep-alive v-if="theme">-->
+    <!--<component :is="theme"></component>-->
+    <!--</keep-alive>-->
     <StartMenu></StartMenu>
     <CommandCenter></CommandCenter>
     <TaskBar></TaskBar>
@@ -13,6 +16,7 @@
   import Desktop from './layout/Desktop.vue';
   import DesktopSunshine from './layout/DesktopSunshine.vue';
   import DesktopUniverse from './layout/DesktopUniverse.vue';
+  import {mapGetters} from 'vuex';
   import StartMenu from './layout/StartMenu.vue';
   import CommandCenter from './layout/CommandCenter.vue';
   import TaskBar from './layout/TaskBar.vue';
@@ -21,8 +25,12 @@
     data () {
       return {}
     },
+    computed: {
+      ...mapGetters({
+        'theme': '_app/getTheme'
+      }),
+    },
     created(){
-
     },
     mounted(){
       this.alertQQ();
@@ -30,11 +38,6 @@
     },
     methods: {
       setBackGround(){
-        //设置壁纸
-//          Win10.setBgUrl({
-//            main:'./static/img/wallpapers/main.jpg',
-//            mobile:'./static/img/wallpapers/mobile.jpg',
-//          });
       },
       alertQQ(){
         setTimeout(function () {
@@ -48,7 +51,8 @@
       }
     },
     components: {
-      Desktop, StartMenu, CommandCenter, TaskBar,DesktopUniverse,DesktopSunshine
+      DesktopUniverse, Desktop, DesktopSunshine,
+      StartMenu, CommandCenter, TaskBar
     }
   }
 </script>
