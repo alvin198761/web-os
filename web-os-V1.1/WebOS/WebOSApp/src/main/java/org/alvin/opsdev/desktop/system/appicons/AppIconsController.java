@@ -1,26 +1,27 @@
 package org.alvin.opsdev.desktop.system.appicons;
 
-import java.security.Principal;
-import java.util.Date;
-import java.util.List;
-
 import org.alvin.opsdev.desktop.system.common.PrincipalController;
-import org.alvin.opsdev.desktop.system.common.acl.SessionUserSubject;
 import org.alvin.opsdev.webos.commom.Page;
 import org.alvin.opsdev.webos.commom.app.appicons.AppIcons;
 import org.alvin.opsdev.webos.commom.app.appicons.AppIconsCond;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.security.Principal;
+import java.util.List;
 
 /**
  * @类说明:应用程序图标数据控制器层
  * @author:高振中
- * @date:2018-05-12 16:51:08
+ * @date:2018-06-16 13:41:24
  **/
 @RestController
-@RequestMapping("/api/appIcons")
+@RequestMapping("/api/appicons")
 public class AppIconsController extends PrincipalController {
 	@SuppressWarnings("unused")
 	private final Log logger = LogFactory.getLog(getClass());
@@ -31,10 +32,7 @@ public class AppIconsController extends PrincipalController {
 	 * @方法说明:新增应用程序图标记录
 	 **/
 	@RequestMapping("save")
-	public int save(@RequestBody AppIcons appIcons, Principal principal) {
-		appIcons.setCreate_time(new Date());
-		SessionUserSubject sessionUserSubject = getSubject(principal);
-		appIcons.setPublish_id(sessionUserSubject.getId());
+	public int save(@RequestBody AppIcons appIcons) {
 		return service.save(appIcons);
 	}
 
@@ -58,7 +56,8 @@ public class AppIconsController extends PrincipalController {
 	 * @方法说明:按条件查询分页应用程序图标列表
 	 **/
 	@RequestMapping("queryPage")
-	public Page<AppIcons> queryPage(@RequestBody AppIconsCond cond) {
+	public Page<AppIcons> queryPage(@RequestBody AppIconsCond cond, Principal principal) {
+		cond.setPublish_id(getSubject(principal).getUser().getId());
 		return service.queryPage(cond);
 	}
 
@@ -66,7 +65,8 @@ public class AppIconsController extends PrincipalController {
 	 * @方法说明:按条件查询不分页应用程序图标列表
 	 **/
 	@RequestMapping("queryList")
-	public List<AppIcons> queryList(@RequestBody AppIconsCond cond) {
+	public List<AppIcons> queryList(@RequestBody AppIconsCond cond, Principal principal) {
+		cond.setPublish_id(getSubject(principal).getUser().getId());
 		return service.queryList(cond);
 	}
 
@@ -84,29 +84,5 @@ public class AppIconsController extends PrincipalController {
 	@RequestMapping("queryCount")
 	public long queryCount(@RequestBody AppIconsCond cond) {
 		return service.queryCount(cond);
-	}
-
-	/**
-	 * 左侧菜单
-	 *
-	 * @param principal
-	 * @return
-	 */
-	@RequestMapping(value = "sidebar", method = RequestMethod.GET)
-	public List<AppIcons> sidebarApps(Principal principal) {
-		SessionUserSubject userSubject = this.getSubject(principal);
-		return this.service.sidebarApps(userSubject.getId());
-	}
-
-	/**
-	 * 鱼眼球菜单
-	 *
-	 * @param principal
-	 * @return
-	 */
-	@RequestMapping(value = "fisheye", method = RequestMethod.GET)
-	public List<AppIcons> fishEyeApps(Principal principal) {
-		SessionUserSubject userSubject = this.getSubject(principal);
-		return service.fishEyeApps(userSubject.getId());
 	}
 }

@@ -15,17 +15,18 @@ import lombok.Setter;
 @Getter
 public class Users {
 
-    //数据库中的字段
-    private Long id;// 主键
-    private String login_name;// 登录名称
-    private String nick_name;// 昵称
-    private String password;// 密码
-    private Byte auth;// 身份
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private Date create_time;// 创建时间
-    private Long author;// 创建人
-    private Byte status;// 状态
+	//数据库中的字段
+	private Long id;// 主键
+	private String login_name;// 登录名称
+	private String nick_name;// 昵称
+	private String password;// 密码
+	private Byte auth;// 身份
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+	private Date create_time;// 创建时间
+	private Long author;// 创建人
+	private Byte status;// 状态
 
-    //此处可添加查询显示辅助字段
+	//此处可添加查询显示辅助字段
+	private int theme = 0;
 
 }

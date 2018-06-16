@@ -6,17 +6,15 @@ import org.alvin.opsdev.webos.commom.app.appicons.AppIconsCond;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @类说明:应用程序图标数据逻辑层
  * @author:高振中
- * @date:2018-05-12 16:51:08
+ * @date:2018-06-16 13:41:24
  **/
 @Service
 public class AppIconsService {
@@ -25,20 +23,11 @@ public class AppIconsService {
 	@Autowired
 	private AppIconsDao dao; //注入应用程序图标数据访问层
 
-	@Value("${img.server}")
-	private String imgServer;
-	@Value("${img.folder_icon}")
-	private String folder_icon;
-
 	/**
 	 * @方法说明:新增应用程序图标记录
 	 **/
 	@Transactional
 	public int save(AppIcons appIcons) {
-		//文件夹处理
-		if (appIcons.getType().intValue() == 4) {
-			appIcons.setIcon(imgServer.concat(folder_icon));
-		}
 		return dao.save(appIcons);
 	}
 
@@ -84,40 +73,5 @@ public class AppIconsService {
 	 **/
 	public long queryCount(AppIconsCond cond) {
 		return dao.queryCount(cond);
-	}
-
-	/**
-	 * 获取侧边条app
-	 *
-	 * @param id
-	 * @return
-	 */
-	public List<AppIcons> sidebarApps(Long id) {
-		//目前是固定的 5个
-		AppIconsCond appIconsCond = new AppIconsCond();
-		appIconsCond.setType((byte) 2);
-		appIconsCond.setStatus((byte) 1);
-		return this.dao.queryList(appIconsCond);
-	}
-
-	/**
-	 * 获取鱼眼球菜单
-	 *
-	 * @param id
-	 * @return
-	 */
-	public List<AppIcons> fishEyeApps(Long id) {
-		//目前是固定的 8个
-		AppIconsCond appIconsCond = new AppIconsCond();
-		appIconsCond.setType((byte) 1);
-		appIconsCond.setStatus((byte) 1);
-		List<AppIcons> fishEyes = this.dao.queryList(appIconsCond);
-		//查询子菜单
-		appIconsCond.setType((byte) 3);
-		List<AppIcons> subMenus = this.dao.queryList(appIconsCond);
-		return fishEyes.stream().map(item -> {
-			item.setApps(subMenus.stream().filter(subM -> subM.getParent_id().equals(item.getId())).collect(Collectors.toList()));
-			return item;
-		}).collect(Collectors.toList());
 	}
 }

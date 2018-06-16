@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.alvin.opsdev.desktop.system.common.PrincipalController;
-import org.alvin.opsdev.desktop.system.common.acl.SessionUserSubject;
+import org.alvin.opsdev.desktop.system.common.acl.UserSessionSubject;
 import org.alvin.opsdev.webos.commom.Page;
 import org.alvin.opsdev.webos.commom.app.protocols.Protocols;
 import org.alvin.opsdev.webos.commom.app.protocols.ProtocolsCond;
@@ -35,8 +35,8 @@ public class ProtocolsController extends PrincipalController {
 	 **/
 	@RequestMapping("save")
 	public int save(@RequestBody Protocols protocols, Principal principal) {
-		SessionUserSubject sessionUserSubject = getSubject(principal);
-		protocols.setAuthor(sessionUserSubject.getId());
+		UserSessionSubject sessionUserSubject = getSubject(principal);
+		protocols.setAuthor(sessionUserSubject.getUser().getId());
 		protocols.setCreate_time(new Date());
 		return service.save(protocols);
 	}

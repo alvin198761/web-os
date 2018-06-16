@@ -6,12 +6,12 @@ import org.alvin.opsdev.webos.commom.app.utils.BaseCondition;
 
 /**
  * @类说明:应用程序图标查询条件实体类
- * @author:唐植超
- * @date:2018-05-12 16:51:08
+ * @author:高振中
+ * @date:2018-06-16 13:41:24
  **/
 @Setter
 @Getter
-public class AppIconsCond extends BaseCondition  {
+public class AppIconsCond extends BaseCondition {
 
 	/**
 	 * @方法说明:拼加自定义条件;可添加新条件、属性字段,删除不用的条件、属性字段
@@ -28,6 +28,7 @@ public class AppIconsCond extends BaseCondition  {
 		add(parent_id, "AND t.parent_id = ?");
 		add(route_url, "AND t.route_url LIKE ?", 3);
 		add(status, "AND t.status = ?");
+		add(seq_num, "AND t.seq_num = ?");
 	}
 
 	//页面查询条件的ID名称、查询条可以自行增减、把不用条件清理掉
@@ -35,11 +36,12 @@ public class AppIconsCond extends BaseCondition  {
 	private Byte type;// 图标类型
 	private String title;// 显示文本
 	private String tip;// 悬停提示
-	private String icon;// 图标
+	private String icon;// 闁搞儳鍋撻悥?
 	private Long publish_id;// 发布人
 	private Date create_time;// 创建时间
 	private Long parent_id;// 父节点
 	private String route_url;// 对应路由地址
 	private Byte status;// 状态
+	private Integer seq_num;// seq_num
 
 }

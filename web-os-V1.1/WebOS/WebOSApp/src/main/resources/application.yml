@@ -1,13 +1,13 @@
 server:
-  ssl:
-    key-store: classpath:keystore.jks
-    key-password: dl123456
-    key-store-password: dl123456
-    key-alias: webos
-    protocol: TLSv1.2
-    enabled: true
-  http2:
-     enabled: true
+#  ssl:
+#    key-store: classpath:keystore.jks
+#    key-password: dl123456
+#    key-store-password: dl123456
+#    key-alias: webos
+#    protocol: TLSv1.2
+#    enabled: true
+#  http2:
+#     enabled: true
   use-forward-headers: true
   compression:
     enabled: true

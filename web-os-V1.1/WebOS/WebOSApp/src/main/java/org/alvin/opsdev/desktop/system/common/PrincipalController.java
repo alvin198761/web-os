@@ -1,21 +1,18 @@
 package org.alvin.opsdev.desktop.system.common;
 
-import org.alvin.opsdev.desktop.system.common.acl.SessionUserSubject;
+import org.alvin.opsdev.desktop.system.common.acl.UserSessionSubject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 
 import java.security.Principal;
 
 public abstract class PrincipalController {
 
-    @Autowired
-    private Boolean isDev;
+	@Autowired
+	private Boolean isDev;
 
-    public SessionUserSubject getSubject(Principal principal) {
-        if (isDev) {
-            SessionUserSubject userSubject = new SessionUserSubject();
-            userSubject.setId(0L);
-            return userSubject;
-        }
-        return null;
-    }
+	public UserSessionSubject getSubject(Principal principal) {
+		UsernamePasswordAuthenticationToken token = (UsernamePasswordAuthenticationToken) principal;
+		return (UserSessionSubject) token.getPrincipal();
+	}
 }
