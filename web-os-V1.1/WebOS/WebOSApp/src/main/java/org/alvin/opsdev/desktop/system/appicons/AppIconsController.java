@@ -1,6 +1,8 @@
 package org.alvin.opsdev.desktop.system.appicons;
 
 import org.alvin.opsdev.desktop.system.common.PrincipalController;
+import org.alvin.opsdev.desktop.system.common.acl.UserSessionSubject;
+import org.alvin.opsdev.webos.commom.ConstCode;
 import org.alvin.opsdev.webos.commom.Page;
 import org.alvin.opsdev.webos.commom.app.appicons.AppIcons;
 import org.alvin.opsdev.webos.commom.app.appicons.AppIconsCond;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.security.Principal;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -32,7 +35,13 @@ public class AppIconsController extends PrincipalController {
 	 * @方法说明:新增应用程序图标记录
 	 **/
 	@RequestMapping("save")
-	public int save(@RequestBody AppIcons appIcons) {
+	public int save(@RequestBody AppIcons appIcons, Principal principal) {
+		UserSessionSubject userSessionSubject = getSubject(principal);
+		appIcons.setPublish_id(userSessionSubject.getUser().getId());
+		appIcons.setParent_id(0L);
+		appIcons.setStatus(ConstCode.STAUS_ENABLED);
+		appIcons.setSeq_num(1);
+		appIcons.setCreate_time(new Date());
 		return service.save(appIcons);
 	}
 

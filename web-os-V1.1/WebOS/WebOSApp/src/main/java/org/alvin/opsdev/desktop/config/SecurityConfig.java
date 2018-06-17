@@ -43,13 +43,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		} else {
 			http.authorizeRequests()
 					//放过的url
-					.antMatchers("/login", "/j_spring_security_check", "gucamole").permitAll()
+					.antMatchers("/login", "/j_spring_security_check").permitAll()
 					.antMatchers("/api/loginValidate").permitAll()
 					.antMatchers("/js/**", "img/**", "css/**", "component/**").permitAll()
 					.antMatchers("/code", "/check").permitAll()
 					.antMatchers("/resources/**").permitAll()
 					.antMatchers("/application/**").permitAll()
 					.antMatchers("/static/favicon.ico").permitAll()
+					.antMatchers("/guacamole").permitAll()
 
 					.anyRequest().anonymous()
 					.and().httpBasic()

@@ -13,7 +13,7 @@ module.exports = {
     proxyTable: {
       '/api': {
         changeOrigin: true,
-        target: 'https://localhost:4004',//开发
+        target: 'http://localhost:4004',//开发
         secure: false
       }
     },

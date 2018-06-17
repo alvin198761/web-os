@@ -2,12 +2,13 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import RootPane from '@/components/RootPane'
-import ProtocolMain from '@/components/protocol/ProtocolMain'
+import CommonRouter from '@/components/commons/CommonRouter'
 import RDPList from '@/components/protocol/RDPList'
 import VNCList from '@/components/protocol/VNCList'
 import SSHList from '@/components/protocol/SSHList'
 import SFTPList from '@/components/protocol/SFTPList'
 import IpmiList from '@/components/protocol/IpmiList'
+import AddApp from '@/components/settings/AddApp'
 
 Vue.use(Router)
 
@@ -24,7 +25,7 @@ export default new Router({
         },
         {
           path: 'protocol',
-          component: ProtocolMain,
+          component: CommonRouter,
           children: [
             {
               path: 'rdp',
@@ -45,6 +46,16 @@ export default new Router({
             , {
               path: 'ipmi',
               component: IpmiList
+            }
+          ]
+        },
+        {
+          path: 'settings',
+          component: CommonRouter,
+          children: [
+            {
+              path: 'addApp',
+              component: AddApp
             }
           ]
         }

@@ -17,8 +17,10 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "cropperjs": "^1.3.2",
+    "dns": "^0.2.2",
     "echarts": "^3.7.0",
-    "element-ui": "^1.4.3",
+    "element-ui": "^2.4.1",
+    "es6-promise": "^4.2.4",
     "js-cookie": "^2.1.3",
     "less": "^2.7.2",
     "lodash": "^4.17.4",

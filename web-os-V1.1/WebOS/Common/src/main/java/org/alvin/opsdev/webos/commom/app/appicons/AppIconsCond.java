@@ -36,7 +36,7 @@ public class AppIconsCond extends BaseCondition {
 	private Byte type;// 图标类型
 	private String title;// 显示文本
 	private String tip;// 悬停提示
-	private String icon;// 闁搞儳鍋撻悥?
+	private String icon;// 图标
 	private Long publish_id;// 发布人
 	private Date create_time;// 创建时间
 	private Long parent_id;// 父节点

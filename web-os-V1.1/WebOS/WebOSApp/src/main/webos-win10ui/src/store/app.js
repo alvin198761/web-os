@@ -59,6 +59,8 @@ export default {
       dispatch("app/initUI");
       //发送心跳数据
       commit("app/heartbeat");
+
+      window.refreshDesktop = commit("app/initDesktopApp");
     },
     ["app/initUI"]({state, dispatch, commit}){
       // 初始化桌面主题

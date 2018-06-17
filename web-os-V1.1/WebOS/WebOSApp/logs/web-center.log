@@ -1887,3 +1887,292 @@ Caused by: java.net.BindException: Address already in use: bind
 2018-06-16 16:36:33,716[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
 2018-06-16 16:36:34,249[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
 2018-06-16 17:01:09,443[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 08:55:12,725[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 7688 (F:\github_dir\web-os\web-os-V1.1\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-V1.1\WebOS\WebOSApp)
+2018-06-17 08:55:12,725[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-06-17 08:55:14,741[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-06-17 08:55:14,772[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-06-17 08:55:14,897[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-06-17 08:55:14,897[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-06-17 08:55:14,944[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-06-17 08:55:17,851[StartupInfoLogger.java:59][INFO]:Started AppMain in 5.829 seconds (JVM running for 18.09)
+2018-06-17 08:57:02,113[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-17 08:57:14,795[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 08:57:14,813[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-06-17 08:57:15,093[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-06-17 08:57:15,801[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 09:39:13,217[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 09:39:13,458[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 09:40:02,554[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 09:41:38,281[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 10:11:39,714[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 10:28:44,926[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 10:41:48,724[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 10:45:57,658[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 10:50:34,641[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 10:50:51,117[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 11:12:16,310[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 11:25:42,895[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 11:25:46,515[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 11:52:38,808[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:00:44,152[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:02:03,809[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:08:17,531[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:12:28,137[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:14:33,789[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:15:51,813[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:21:14,771[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:21:37,135[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:23:44,221[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:39:35,800[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:43:16,789[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:49:51,981[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:51:55,254[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:58:28,681[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 12:59:07,561[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 13:00:00,687[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 13:00:33,538[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 13:02:54,799[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 13:11:40,446[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 13:29:04,823[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 13:34:07,208[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 13:35:21,569[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 13:35:27,456[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 13:51:24,962[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 13:51:30,252[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 13:51:30,253[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 13:53:06,526[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 13:53:11,451[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 13:53:11,455[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 13:57:12,661[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 13:57:20,471[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 13:57:50,232[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 13:59:08,947[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 14:02:04,336[LoggingExceptionHandler.java:80][ERROR]:UT005023: Exception handling request to /api/appicons/[object%20Object]
+java.lang.IllegalArgumentException: Illegal character in path at index 35: http://localhost:4004/api/appicons/[object%20Object]
+	at java.net.URI.create(URI.java:852)
+	at org.springframework.boot.actuate.web.trace.servlet.TraceableHttpServletRequest.getUri(TraceableHttpServletRequest.java:56)
+	at org.springframework.boot.actuate.trace.http.HttpExchangeTracer$FilteredTraceableRequest.getUri(HttpExchangeTracer.java:130)
+	at org.springframework.boot.actuate.trace.http.HttpTrace$Request.<init>(HttpTrace.java:111)
+	at org.springframework.boot.actuate.trace.http.HttpTrace$Request.<init>(HttpTrace.java:99)
+	at org.springframework.boot.actuate.trace.http.HttpTrace.<init>(HttpTrace.java:49)
+	at org.springframework.boot.actuate.trace.http.HttpExchangeTracer.receivedRequest(HttpExchangeTracer.java:58)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:158)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.URISyntaxException: Illegal character in path at index 35: http://localhost:4004/api/appicons/[object%20Object]
+	at java.net.URI$Parser.fail(URI.java:2848)
+	at java.net.URI$Parser.checkChars(URI.java:3021)
+	at java.net.URI$Parser.parseHierarchical(URI.java:3105)
+	at java.net.URI$Parser.parse(URI.java:3053)
+	at java.net.URI.<init>(URI.java:588)
+	at java.net.URI.create(URI.java:850)
+	... 87 common frames omitted
+2018-06-17 14:02:37,742[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 14:02:57,847[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 14:03:13,376[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 14:04:16,533[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:05:08,743[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:05:08,743[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 14:07:05,929[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:13:51,801[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:27:31,795[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:27:31,795[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:28:17,619[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:28:17,621[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:28:24,129[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:28:24,144[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:28:24,150[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:29:01,167[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:30:00,685[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:30:11,774[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:30:11,883[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:32:00,263[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:32:00,267[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:32:06,225[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:32:06,238[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:32:06,239[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:32:39,695[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:35:03,478[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:35:12,204[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:35:12,212[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:35:20,814[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:35:20,819[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:35:20,826[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:35:45,845[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:35:45,973[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:37:28,812[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:38:00,002[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:38:00,004[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:38:09,107[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:38:09,107[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:38:09,111[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:39:03,726[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:39:25,472[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:39:25,486[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:39:30,837[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:39:30,851[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:39:30,859[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:39:50,258[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:39:50,332[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:40:59,911[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:40:59,969[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:41:41,588[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:41:52,525[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:42:03,412[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:42:03,416[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:42:11,896[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:42:11,901[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:42:11,903[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:42:48,365[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:42:48,365[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:44:00,925[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:44:01,059[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:51:13,060[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:51:13,167[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:52:13,547[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:52:13,553[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:52:13,553[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:54:51,907[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 132604 (F:\github_dir\web-os\web-os-V1.1\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-V1.1\WebOS\WebOSApp)
+2018-06-17 14:54:51,910[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-06-17 14:54:54,021[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-06-17 14:54:54,044[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-06-17 14:54:54,140[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-06-17 14:54:54,140[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-06-17 14:54:54,171[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-06-17 14:54:57,208[StartupInfoLogger.java:59][INFO]:Started AppMain in 6.096 seconds (JVM running for 16.058)
+2018-06-17 14:55:30,347[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-17 14:55:43,248[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 14:55:43,269[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-06-17 14:55:43,525[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-06-17 14:55:44,418[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:55:44,418[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:55:51,034[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:55:51,037[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:55:51,040[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:56:18,454[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:56:18,454[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:56:31,019[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:56:31,019[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:58:48,556[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:58:48,556[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:58:55,948[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 14:58:55,947[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:07:13,887[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:07:13,887[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:07:26,714[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:07:26,715[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:07:28,631[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:07:28,638[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:08:01,612[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:08:01,612[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:08:31,149[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:08:31,152[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:09:13,924[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:09:13,930[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:10:11,857[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 268076 (F:\github_dir\web-os\web-os-V1.1\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-V1.1\WebOS\WebOSApp)
+2018-06-17 15:10:11,862[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-06-17 15:10:14,159[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-06-17 15:10:14,179[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-06-17 15:10:14,270[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-06-17 15:10:14,270[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-06-17 15:10:14,300[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-06-17 15:10:17,478[StartupInfoLogger.java:59][INFO]:Started AppMain in 6.282 seconds (JVM running for 15.941)
+2018-06-17 15:11:49,755[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-17 15:12:52,856[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 15:12:52,870[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-06-17 15:12:53,112[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-06-17 15:12:54,031[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:12:54,031[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:13:02,399[GuacamoleWebSocketTunnelHandler.java:64][ERROR]:Creation of WebSocket tunnel to guacd failed: java.net.ConnectException: Connection refused: connect
+2018-06-17 15:13:34,939[GuacamoleWebSocketTunnelHandler.java:64][ERROR]:Creation of WebSocket tunnel to guacd failed: java.net.ConnectException: Connection refused: connect
+2018-06-17 15:13:57,665[GuacamoleWebSocketTunnelHandler.java:64][ERROR]:Creation of WebSocket tunnel to guacd failed: java.net.ConnectException: Connection refused: connect
+2018-06-17 15:13:58,737[GuacamoleWebSocketTunnelHandler.java:64][ERROR]:Creation of WebSocket tunnel to guacd failed: java.net.ConnectException: Connection refused: connect
+2018-06-17 15:16:02,591[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 15:16:03,706[GuacamoleWebSocketTunnelHandler.java:64][ERROR]:Creation of WebSocket tunnel to guacd failed: java.net.ConnectException: Connection refused: connect
+2018-06-17 15:16:11,456[GuacamoleWebSocketTunnelHandler.java:64][ERROR]:Creation of WebSocket tunnel to guacd failed: java.net.ConnectException: Connection refused: connect
+2018-06-17 15:17:14,347[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:17:14,345[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:17:20,685[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:17:20,694[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:17:22,799[GuacamoleWebSocketTunnelHandler.java:64][ERROR]:Creation of WebSocket tunnel to guacd failed: java.net.ConnectException: Connection refused: connect
+2018-06-17 15:17:52,604[GuacamoleWebSocketTunnelHandler.java:64][ERROR]:Creation of WebSocket tunnel to guacd failed: java.net.ConnectException: Connection refused: connect
+2018-06-17 15:18:04,044[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:18:04,046[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
