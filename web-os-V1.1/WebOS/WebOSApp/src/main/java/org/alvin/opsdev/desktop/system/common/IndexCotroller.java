@@ -23,7 +23,6 @@ public class IndexCotroller extends PrincipalController {
 
 	@RequestMapping("/guacamole")
 	public String guacamole() {
-		System.out.println("--------");
 		return "guacamole";
 	}
 

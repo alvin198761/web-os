@@ -2176,3 +2176,10 @@ Caused by: java.net.URISyntaxException: Illegal character in path at index 35: h
 2018-06-17 15:17:52,604[GuacamoleWebSocketTunnelHandler.java:64][ERROR]:Creation of WebSocket tunnel to guacd failed: java.net.ConnectException: Connection refused: connect
 2018-06-17 15:18:04,044[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
 2018-06-17 15:18:04,046[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:50:21,226[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-06-17 15:50:21,700[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:50:21,700[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:59:45,922[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 15:59:45,956[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 16:01:19,269[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-06-17 16:01:19,271[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0

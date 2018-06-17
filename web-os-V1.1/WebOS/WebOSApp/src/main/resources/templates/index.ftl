@@ -32,4 +32,4 @@
           'animated bounceIn',
         ], 0.01);
 
-      });</script><link href=/css/app.c73fdc330700ac2c8ddda5e631d01737.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/js/manifest.1766e3c7586055624ca0.js></script><script type=text/javascript src=/js/vendor.404e73eb42ffbb178f73.js></script><script type=text/javascript src=/js/app.e7609e07b89cb89ba0d9.js></script></body></html>
+      });</script><link href=/css/app.c73fdc330700ac2c8ddda5e631d01737.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/js/manifest.1766e3c7586055624ca0.js></script><script type=text/javascript src=/js/vendor.404e73eb42ffbb178f73.js></script><script type=text/javascript src=/js/app.0bf065abcd303ab90bd8.js></script></body></html>
