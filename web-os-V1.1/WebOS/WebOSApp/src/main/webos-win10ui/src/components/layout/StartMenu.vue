@@ -29,9 +29,8 @@
             <iframe style="margin-top: 10px" frameborder="no" border="0" marginwidth="0" marginheight="0" width=264
                     height=110 src="//music.163.com/outchain/player?type=2&id=110771&auto=0&height=90"></iframe>
           </div>
-          <div class="content red cover">
-            <img width="264" style="position: relative;top: -50px;"
-                 src="../../../static/img/presentation/wangyiyun.gif"/>
+          <div class="content red cover" style="text-align: center;line-height: 120px ;font-size: 40px">
+           <i class="fa fa-music" /> 音乐
           </div>
         </div>
         <div loc="1,4" size="4,4" class="block">
@@ -71,16 +70,15 @@
           </div>
         </div>
         <div loc="5,1" size="2,1" class="block">
-          <div class="content" style="background: url('../../../static/img/presentation/1.png');background-size: auto">
+          <div class="content black">
             <div class="win10-block-content-text">
               <i class="fa fa-github"></i> github
             </div>
           </div>
         </div>
         <div loc="5,2" size="2,2" class="block">
-          <div class="content">
-            <img style="width: 40px;height: 40px;margin: 5px auto;display: block"
-                 src="../../../static/img/icon/baidu.png">
+          <div class="content" style="text-align: center; line-height: 40px;font-size: 40px">
+            <i class="fa fa-paw"/>
             <div class="win10-block-content-text">百度搜索</div>
           </div>
         </div>
