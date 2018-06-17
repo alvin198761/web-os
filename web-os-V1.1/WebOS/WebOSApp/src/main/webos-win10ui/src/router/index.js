@@ -4,7 +4,7 @@ import Home from '@/components/Home'
 import RootPane from '@/components/RootPane'
 import CommonRouter from '@/components/commons/CommonRouter'
 import RDPList from '@/components/protocol/RDPList'
-import VNCList from '@/components/protocol/VncList'
+import VncList from '@/components/protocol/VncList'
 import SSHList from '@/components/protocol/SSHList'
 import SFTPList from '@/components/protocol/SFTPList'
 import IpmiList from '@/components/protocol/IpmiList'
@@ -33,7 +33,7 @@ export default new Router({
             }
             , {
               path: 'vnc',
-              component: VNCList
+              component: VncList
             }
             , {
               path: 'ssh',
