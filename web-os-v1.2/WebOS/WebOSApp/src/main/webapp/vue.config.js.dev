@@ -1,0 +1,76 @@
+var path = require('path');
+
+const Config = require('webpack-chain');
+const config = new Config();
+function resolve (dir) {
+    return path.join(__dirname, dir)
+}
+module.exports = {
+    baseUrl:'/',
+    indexPath:path.resolve(__dirname, '../resources/templates/index.ftl'),
+    outputDir: path.resolve(__dirname, '../resources/static'),
+    configureWebpack: {
+        //引入外部依赖，排除包
+     /*    externals: {
+            vue: 'Vue',
+            vuex:"Vuex",
+            "vue-router":"VueRouter",
+            /*'element-ui': 'ELEMENT',*/
+            'iview': 'iview',
+            jquery: 'jQuery',
+            "echarts": "echarts",
+            "moment": "moment",
+            "vue-echarts": "VueECharts",
+            "axios":"axios",
+            "less":"less"
+            // "querystring":"querystring"
+        } */
+    },
+
+    //去掉打包js里边的source map文件
+    productionSourceMap: false,
+    chainWebpack:()=>{
+    },
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'https://localhost:8000',//在线测试
+        // ws: true,
+        changeOrigin: true,
+        secure: false
+      }
+    }
+  },
+  pages : {
+    index : {
+      // page 的入口
+      entry: "src/views/main.js",
+      // 模板来源
+      template: "public/index.html",
+      // 在 dist/index.html 的输出
+      filename: "index.html",
+      // 当使用 title 选项时，
+      // template 中的 title 标签需要是 <%= htmlWebpackPlugin.options.title %>
+      title: "Web OS - V1.2",
+      // 在这个页面中包含的块，默认情况下会包含
+      // 提取出来的通用 chunk 和 vendor chunk。
+      chunks: ["chunk-vendors", "chunk-common", "index"]
+    },
+          settings : {
+            // page 的入口
+            entry: "src/views/settings.js",
+            // 模板来源
+            template: "public/settings.html",
+            // 在 dist/index.html 的输出
+            filename: "settings.html",
+            // 当使用 title 选项时，
+            // template 中的 title 标签需要是 <%= htmlWebpackPlugin.options.title %>
+            title: "Web OS - V1.2 Settings",
+            // 在这个页面中包含的块，默认情况下会包含
+            // 提取出来的通用 chunk 和 vendor chunk。
+            chunks: ["chunk-vendors", "chunk-common", "settings"]
+          }
+  },
+    pluginOptions:{}
+
+}

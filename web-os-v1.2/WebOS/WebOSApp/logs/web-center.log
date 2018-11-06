@@ -1,0 +1,678 @@
+2018-07-09 08:26:16,850[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 305472 (F:\github_dir\web-os\web-os-V1.1\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-V1.1\WebOS\WebOSApp)
+2018-07-09 08:26:16,866[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-07-09 08:26:24,132[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-07-09 08:26:24,304[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-07-09 08:26:24,914[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-07-09 08:26:24,914[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-07-09 08:26:25,054[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-07-09 08:26:30,243[StartupInfoLogger.java:59][INFO]:Started AppMain in 15.065 seconds (JVM running for 31.162)
+2018-07-09 08:27:51,432[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-09 08:29:25,796[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-07-09 08:29:25,808[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-07-09 08:29:29,032[HikariPool.java:567][ERROR]:HikariPool-1 - Exception during pool initialization.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:600)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:657)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:688)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:751)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsDao.queryList(AppIconsDao.java:102)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsDao$$FastClassBySpringCGLIB$$15b200e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsDao$$EnhancerBySpringCGLIB$$2dd455f1.queryList(<generated>)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsService.queryList(AppIconsService.java:68)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsService$$FastClassBySpringCGLIB$$c042c531.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsService$$EnhancerBySpringCGLIB$$f79af22d.queryList(<generated>)
+	at org.alvin.opsdev.desktop.system.common.acl.UserSecurityService.loadUserByUsername(UserSecurityService.java:76)
+	at org.alvin.opsdev.desktop.system.common.acl.UserAuthenticationProvider.authenticate(UserAuthenticationProvider.java:34)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:174)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 107 common frames omitted
+2018-07-09 08:29:29,047[UserAuthenticationProvider.java:40][ERROR]:org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:600)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:657)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:688)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:751)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsDao.queryList(AppIconsDao.java:102)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsDao$$FastClassBySpringCGLIB$$15b200e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsDao$$EnhancerBySpringCGLIB$$2dd455f1.queryList(<generated>)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsService.queryList(AppIconsService.java:68)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsService$$FastClassBySpringCGLIB$$c042c531.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsService$$EnhancerBySpringCGLIB$$f79af22d.queryList(<generated>)
+	at org.alvin.opsdev.desktop.system.common.acl.UserSecurityService.loadUserByUsername(UserSecurityService.java:76)
+	at org.alvin.opsdev.desktop.system.common.acl.UserAuthenticationProvider.authenticate(UserAuthenticationProvider.java:34)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:174)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	... 84 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 107 common frames omitted
+2018-07-09 08:29:40,771[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-07-09 08:29:40,773[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-07-09 08:29:43,778[HikariPool.java:567][ERROR]:HikariPool-1 - Exception during pool initialization.
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:600)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:657)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:688)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:751)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsDao.queryList(AppIconsDao.java:102)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsDao$$FastClassBySpringCGLIB$$15b200e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsDao$$EnhancerBySpringCGLIB$$2dd455f1.queryList(<generated>)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsService.queryList(AppIconsService.java:68)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsService$$FastClassBySpringCGLIB$$c042c531.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsService$$EnhancerBySpringCGLIB$$f79af22d.queryList(<generated>)
+	at org.alvin.opsdev.desktop.system.common.acl.UserSecurityService.loadUserByUsername(UserSecurityService.java:76)
+	at org.alvin.opsdev.desktop.system.common.acl.UserAuthenticationProvider.authenticate(UserAuthenticationProvider.java:34)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:174)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 107 common frames omitted
+2018-07-09 08:29:43,783[UserAuthenticationProvider.java:40][ERROR]:org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:600)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:657)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:688)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:700)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:751)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsDao.queryList(AppIconsDao.java:102)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsDao$$FastClassBySpringCGLIB$$15b200e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsDao$$EnhancerBySpringCGLIB$$2dd455f1.queryList(<generated>)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsService.queryList(AppIconsService.java:68)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsService$$FastClassBySpringCGLIB$$c042c531.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:684)
+	at org.alvin.opsdev.desktop.system.appicons.AppIconsService$$EnhancerBySpringCGLIB$$f79af22d.queryList(<generated>)
+	at org.alvin.opsdev.desktop.system.common.acl.UserSecurityService.loadUserByUsername(UserSecurityService.java:76)
+	at org.alvin.opsdev.desktop.system.common.acl.UserAuthenticationProvider.authenticate(UserAuthenticationProvider.java:34)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:174)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:199)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:94)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:64)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:336)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	... 84 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 107 common frames omitted
+2018-07-09 08:31:10,366[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 307720 (F:\github_dir\web-os\web-os-V1.1\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-V1.1\WebOS\WebOSApp)
+2018-07-09 08:31:10,366[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-07-09 08:31:12,406[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-07-09 08:31:12,421[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-07-09 08:31:12,515[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-07-09 08:31:12,515[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-07-09 08:31:12,562[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-07-09 08:31:15,766[StartupInfoLogger.java:59][INFO]:Started AppMain in 6.116 seconds (JVM running for 15.353)
+2018-07-09 08:31:34,670[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-07-09 08:31:34,763[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-07-09 08:31:34,777[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-07-09 08:31:35,160[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-07-09 08:31:36,242[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-07-09 08:31:36,242[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-07-09 08:31:47,769[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-07-09 08:31:47,771[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-07-09 08:31:47,778[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-07-09 08:32:01,305[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-07-09 08:32:01,317[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-07-09 08:32:08,118[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-07-09 08:32:08,119[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-11-06 13:19:55,714[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 2652 (F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp)
+2018-11-06 13:19:55,734[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-11-06 13:19:57,849[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-11-06 13:19:57,871[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-11-06 13:19:58,125[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-11-06 13:19:58,125[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-11-06 13:19:58,155[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-11-06 13:20:01,612[StartupInfoLogger.java:59][INFO]:Started AppMain in 6.596 seconds (JVM running for 15.406)
+2018-11-06 13:20:48,558[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-06 13:20:58,530[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-11-06 13:20:58,547[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-11-06 13:20:58,809[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-11-06 13:34:32,898[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 9232 (F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp)
+2018-11-06 13:34:32,902[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-11-06 13:34:34,759[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-11-06 13:34:34,780[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-11-06 13:34:35,014[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-11-06 13:34:35,014[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-11-06 13:34:35,042[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-11-06 13:34:37,909[StartupInfoLogger.java:59][INFO]:Started AppMain in 5.629 seconds (JVM running for 14.746)
+2018-11-06 13:35:11,457[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-06 13:35:18,586[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-11-06 13:35:18,597[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-11-06 13:35:18,852[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-11-06 13:38:24,652[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 10256 (F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp)
+2018-11-06 13:38:24,656[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-11-06 13:38:26,645[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-11-06 13:38:26,664[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-11-06 13:38:26,900[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-11-06 13:38:26,900[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-11-06 13:38:26,928[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-11-06 13:38:29,825[StartupInfoLogger.java:59][INFO]:Started AppMain in 5.807 seconds (JVM running for 13.865)
+2018-11-06 13:38:38,926[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-06 13:38:45,421[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-11-06 13:38:45,433[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-11-06 13:38:45,666[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-11-06 13:41:33,453[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 13284 (F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp)
+2018-11-06 13:41:33,456[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-11-06 13:41:35,340[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-11-06 13:41:35,363[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-11-06 13:41:35,598[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-11-06 13:41:35,598[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-11-06 13:41:35,629[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-11-06 13:41:38,608[StartupInfoLogger.java:59][INFO]:Started AppMain in 5.859 seconds (JVM running for 14.539)
+2018-11-06 13:41:43,887[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-06 13:41:50,059[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-11-06 13:41:50,073[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-11-06 13:41:50,307[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-11-06 13:44:03,174[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 6416 (F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp)
+2018-11-06 13:44:03,185[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-11-06 13:44:05,281[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-11-06 13:44:05,301[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-11-06 13:44:05,537[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-11-06 13:44:05,537[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-11-06 13:44:05,563[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-11-06 13:44:08,512[StartupInfoLogger.java:59][INFO]:Started AppMain in 6.075 seconds (JVM running for 15.469)
+2018-11-06 13:44:15,161[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-06 13:44:23,468[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-11-06 13:44:23,480[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-11-06 13:44:23,724[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-11-06 14:02:06,031[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 15236 (F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp)
+2018-11-06 14:02:06,034[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-11-06 14:02:07,979[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-11-06 14:02:08,001[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-11-06 14:02:08,244[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-11-06 14:02:08,244[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-11-06 14:02:08,269[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-11-06 14:02:11,374[StartupInfoLogger.java:59][INFO]:Started AppMain in 5.998 seconds (JVM running for 14.25)
+2018-11-06 14:02:58,031[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-06 14:03:05,659[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-11-06 14:03:05,673[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-11-06 14:03:05,915[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-11-06 14:06:52,134[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 15664 (F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp)
+2018-11-06 14:06:52,138[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-11-06 14:06:54,116[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-11-06 14:06:54,138[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-11-06 14:06:54,384[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-11-06 14:06:54,384[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-11-06 14:06:54,419[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-11-06 14:06:57,567[StartupInfoLogger.java:59][INFO]:Started AppMain in 6.067 seconds (JVM running for 15.218)
+2018-11-06 14:06:58,885[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-06 14:07:05,250[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-11-06 14:07:05,265[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-11-06 14:07:05,504[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-11-06 14:10:37,335[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 7444 (F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp)
+2018-11-06 14:10:37,338[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-11-06 14:10:39,278[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-11-06 14:10:39,309[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-11-06 14:10:39,574[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-11-06 14:10:39,575[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-11-06 14:10:39,609[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-11-06 14:10:42,767[StartupInfoLogger.java:59][INFO]:Started AppMain in 6.074 seconds (JVM running for 15.13)
+2018-11-06 14:11:15,028[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-06 14:11:21,372[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-11-06 14:11:21,385[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-11-06 14:11:21,625[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-11-06 14:11:28,562[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0
+2018-11-06 14:15:13,507[StartupInfoLogger.java:50][INFO]:Starting AppMain on DESKTOP-PS54HOV with PID 6600 (F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp\target\classes started by alvin in F:\github_dir\web-os\web-os-v1.2\WebOS\WebOSApp)
+2018-11-06 14:15:13,511[SpringApplication.java:663][INFO]:The following profiles are active: dev
+2018-11-06 14:15:15,368[Xnio.java:104][INFO]:XNIO version 3.3.8.Final
+2018-11-06 14:15:15,389[NioXnio.java:55][INFO]:XNIO NIO Implementation Version 3.3.8.Final
+2018-11-06 14:15:15,623[Bootstrap.java:67][WARN]:UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-11-06 14:15:15,623[Bootstrap.java:76][WARN]:UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-11-06 14:15:15,653[ServletContextImpl.java:360][INFO]:Initializing Spring embedded WebApplicationContext
+2018-11-06 14:15:18,562[StartupInfoLogger.java:59][INFO]:Started AppMain in 5.707 seconds (JVM running for 14.454)
+2018-11-06 14:15:51,697[ServletContextImpl.java:360][INFO]:Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-06 14:15:59,299[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0 AND t.status = 1
+2018-11-06 14:15:59,316[HikariDataSource.java:110][INFO]:HikariPool-1 - Starting...
+2018-11-06 14:15:59,600[HikariDataSource.java:123][INFO]:HikariPool-1 - Start completed.
+2018-11-06 14:16:04,788[SqlUtil.java:33][INFO]:SELECT t.id,t.type,t.title,t.tip,t.icon,t.publish_id,t.create_time,t.parent_id,t.route_url,t.status,t.seq_num FROM app_icon t WHERE 1=1 AND t.publish_id = 0

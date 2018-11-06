@@ -1,0 +1,10 @@
+webosConfig:
+#delete update
+  dropMode: update
+  config:
+    webosapp:
+    - url: jdbc:mysql://localhost:3306/webosapp
+      user: root
+      password: alvin
+
+ 

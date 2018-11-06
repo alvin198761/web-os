@@ -1,0 +1,59 @@
+{
+  "name": "webapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "changeToServe": "node ./shell/changeConfig.js dev",
+    "changeToProd": "node ./shell/changeConfig.js prod",
+    "serve": "vue-cli-service serve --port 8081 --open",
+    "buildVueCli": "vue-cli-service build",
+    "mock": "puer --no-launch -r proxy.config.js",
+    "copyResToDist": "node ./shell/CopyResourceToDist.js",
+    "build": "npm-run-all -l -p -s buildVueCli copyResToDist",
+    "startForServe": "npm-run-all -l -p -s changeToServe serve",
+    "startForProd": "npm-run-all -l -p -s changeToProd serve"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cropperjs": "^1.4.1",
+    "echarts": "^4.2.0-rc.2",
+    "element-ui": "^2.4.9",
+    "es6-promise": "^4.2.5",
+    "iview": "^3.1.3",
+    "js-cookie": "^2.1.3",
+    "lodash": "^4.17.4",
+    "moment": "^2.22.2",
+    "ssh2-sftp-client": "^2.4.0",
+    "supermicro-ipmi": "0.0.2",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "babel-plugin-import": "^1.9.1",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "mockjs": "^1.0.1-beta3",
+    "npm-run-all": "^4.1.3",
+    "puer": "^2.0.1",
+    "shelljs": "^0.8.2",
+    "style-loader": "^0.23.1",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

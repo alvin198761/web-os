@@ -105,7 +105,6 @@
   </div>
 </template>
 <script>
-  import RDPList from '../protocol/RDPList.vue';
   export default{
     data: function () {
       return {}
@@ -116,11 +115,11 @@
     methods: {
       openApp(url, title){
         Win10.menuClose();
-        const server = window.location.protocol + "//" + window.location.hostname + ':' + window.location.port + '/#' + url;
+        const server = window.location.protocol + "//" + window.location.hostname + ':' + window.location.port + '/settings.html#' + url;
         Win10.openUrl(server, title);
       },
     },
-    components: {RDPList}
+    components: { }
   }
 </script>
 <style>
