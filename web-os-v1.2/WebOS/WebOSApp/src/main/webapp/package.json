@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "npmInstall": "npm install",
     "changeToServe": "node ./shell/changeConfig.js dev",
     "changeToProd": "node ./shell/changeConfig.js prod",
     "serve": "vue-cli-service serve --port 8081 --open",

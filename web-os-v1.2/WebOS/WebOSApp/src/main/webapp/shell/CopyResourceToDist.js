@@ -1,8 +1,34 @@
-var shell = require('shelljs');
-console.log("build 完成，开始拷贝资源文件");
-shell.mv('../resources/static/login.html',  '../resources/templates/login.ftl');
-shell.mv('../resources/static/settings.html',  '../resources/templates/settings.ftl');
-shell.mv('../resources/static/guacamole.html',  '../resources/templates/guacamole.ftl');
-console.log("拷贝完成");
+'use strict';
 
-//cp mv rm
+const mock = {};
+var fs = require('fs');
+var path = require('path');
+var shell = require('shelljs');
+
+function endWith(src, str) {
+  if (str == null || str == "" || src.length == 0 || str.length > src.length)
+    return false;
+  if (src.substring(src.length - str.length) == str)
+    return true;
+  else
+    return false;
+  return true;
+}
+
+function moveHtml(src, dist) {
+  src = path.resolve(src);
+  dist = path.resolve(dist);
+  fs.readdirSync(src).forEach(function (subFile) {
+    if (endWith(subFile, ".html")) {
+      console.log("复制文件：" + path.join(src, subFile));
+      var fileName = subFile.substring(0, subFile.length - 5);
+      console.log(path.join(dist, fileName + ".ftl"));
+      shell.mv(path.join(src, subFile), path.join(dist, fileName + ".ftl"));
+    }
+  });
+}
+
+console.log("build 完成，开始拷贝资源文件");
+moveHtml("../resources/static", "../resources/templates");
+console.log("拷贝完成");
+module.exports = mock;

@@ -31,6 +31,11 @@ public class IndexCotroller extends PrincipalController {
 		return "settings";
 	}
 
+	@RequestMapping("/browser")
+	public String browser() {
+		return "browser";
+	}
+
 	@ResponseBody
 	@RequestMapping("/api/session/info")
 	public Users sessionInfo(Principal principal) {

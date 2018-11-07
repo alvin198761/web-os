@@ -11,20 +11,20 @@ module.exports = {
     outputDir: path.resolve(__dirname, '../resources/static'),
     configureWebpack: {
         //引入外部依赖，排除包
-     /*    externals: {
-            vue: 'Vue',
-            vuex:"Vuex",
-            "vue-router":"VueRouter",
-            /*'element-ui': 'ELEMENT',*/
-            'iview': 'iview',
-            jquery: 'jQuery',
-            "echarts": "echarts",
-            "moment": "moment",
-            "vue-echarts": "VueECharts",
-            "axios":"axios",
-            "less":"less"
-            // "querystring":"querystring"
-        } */
+         externals: {
+                    // vue: 'Vue',
+                    // vuex:"Vuex",
+                    // "vue-router":"VueRouter",
+                    // /*'element-ui': 'ELEMENT',*/
+                    // 'iview': 'iview',
+                    // jquery: 'jQuery',
+                    // "echarts": "echarts",
+                    // "moment": "moment",
+                    // "vue-echarts": "VueECharts",
+                    // "axios":"axios",
+                    // "less":"less"
+                    // "querystring":"querystring"
+        }
     },
 
     //去掉打包js里边的source map文件

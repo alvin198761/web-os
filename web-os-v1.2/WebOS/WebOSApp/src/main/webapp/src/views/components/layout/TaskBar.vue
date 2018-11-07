@@ -2,7 +2,7 @@
   <div id="win10_task_bar">
     <div id="win10_btn_group_left" class="btn_group">
       <div id="win10_btn_win" class="btn"><span class="fa fa-windows"></span></div>
-      <div class="btn" id="win10-btn-browser"><span class="fa fa-internet-explorer"></span></div>
+      <div class="btn" @click="showBrowser"><span class="fa fa-internet-explorer"></span></div>
     </div>
     <div id="win10_btn_group_middle" class="btn_group"></div>
     <div id="win10_btn_group_right" class="btn_group">
@@ -17,17 +17,21 @@
 </template>
 <script>
 
-    export default{
-        data: function () {
-            return {}
-        },
-        computed: {},
-        created: function () {
+  export default{
+    data: function () {
+      return {}
+    },
+    computed: {},
+    created: function () {
 
-        },
-        methods: {},
-        components: {}
-    }
+    },
+    methods: {
+      showBrowser(){
+        Win10.openUrl("/browser", "浏览器")
+      }
+    },
+    components: {}
+  }
 </script>
 <style>
 
