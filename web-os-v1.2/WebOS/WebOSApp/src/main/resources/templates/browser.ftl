@@ -24,7 +24,7 @@
       <el-button icon="el-icon-refresh" title="刷新" @click="refresh"></el-button>
     </template>
   </el-input>
-  <iframe frameborder="0" style="width: 100% ; height: 100%" ref="iframe"
+  <iframe frameborder="0" style="width: 100% ; height: 100%; margin-top: 5px" ref="iframe"
           sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation"></iframe>
 </div>
 </body>
@@ -35,7 +35,10 @@
   new Vue({
     el: '#app',
     data: function () {
-      return {url: ''}
+      return {url: 'http://www.baidu.com'}
+    },
+    mounted(){
+        this.refresh();
     },
     methods: {
       refresh(){

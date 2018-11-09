@@ -11,5 +11,6 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 
-
+window.store = store;
+window.Win10 = Win10;
 store.dispatch("app/initApp");

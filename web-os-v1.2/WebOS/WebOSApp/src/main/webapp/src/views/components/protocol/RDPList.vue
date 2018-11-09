@@ -100,7 +100,7 @@
       },
       handleConnect: function (index, row) {
         const server = window.location.protocol + "//" + window.location.hostname + ':' + window.location.port + '/guacamole?id=' + row.id + "&type=rdp";
-        Win10.openUrl(server, '远程 rdp');
+        window.Win10.openUrl(server, '远程 rdp');
       },
       save() {//新增及修改记录
         const that = this;

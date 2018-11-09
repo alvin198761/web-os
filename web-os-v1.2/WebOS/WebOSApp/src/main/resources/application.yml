@@ -35,7 +35,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/webosapp?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
-    password: alvin
+    password: T_dl123456
 
 http:
   port: 4005

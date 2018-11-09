@@ -9,6 +9,9 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.config.productionTip = true
 Vue.use(ElementUI);
 
+window.store = window.parent.store;
+window.Win10 = window.parent.Win10;
+
 new Vue({
   router,
   store,
