@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+  <title>Wired Elements</title>
+
+  <link rel="preload" href="./static/font/font.woff2" as="font">
+  <style>
+    @font-face {
+      font-family: 'Gloria Hallelujah';
+      font-style: normal;
+      font-weight: 400;
+      font-display: fallback;
+      src: local('Gloria Hallelujah'), local('GloriaHallelujah'), url(./static/font/font.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    body {
+      margin: 0;
+      font-family: 'Gloria Hallelujah', sans-serif;
+      font-size: 22px;
+      font-display: fallback;
+      letter-spacing: 0.05em;
+      line-height: 2;
+    }
+    article {
+      padding: 15px 20px 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    #logo {
+      float: left;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      padding: 10px;
+      margin-right: 10px;
+    }
+    a,
+    a:hover,
+    a:visited {
+      color: inherit;
+      text-decoration: none;
+      outline: none;
+    }
+    a.textlink {
+      box-shadow: 0 -6px #f0e6f4 inset;
+    }
+    wired-button {
+      margin: 5px 10px;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      background: #f0e6f4;
+    }
+    wired-card {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 19px;
+        letter-spacing: 0.05em;
+      }
+      article {
+        padding: 5px 16px 40px;
+      }
+    }
+  </style>
+  <script defer src="./static/libs/main.min.js"></script>
+</head>
+
+<body>
+<div id="app"></div>
+</body>
+
+</html>

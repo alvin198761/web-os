@@ -11,19 +11,19 @@ module.exports = {
     outputDir: path.resolve(__dirname, '../resources/static'),
     configureWebpack: {
         //引入外部依赖，排除包
-        externals: {
-                       // vue: 'Vue',
-                       // vuex:"Vuex",
-                       // "vue-router":"VueRouter",
-                       // /*'element-ui': 'ELEMENT',*/
-                       // 'iview': 'iview',
-                       // jquery: 'jQuery',
-                       // "echarts": "echarts",
-                       // "moment": "moment",
-                       // "vue-echarts": "VueECharts",
-                       // "axios":"axios",
-                       // "less":"less"
-                       // "querystring":"querystring"
+         externals: {
+                    // vue: 'Vue',
+                    // vuex:"Vuex",
+                    // "vue-router":"VueRouter",
+                    // /*'element-ui': 'ELEMENT',*/
+                    // 'iview': 'iview',
+                    // jquery: 'jQuery',
+                    // "echarts": "echarts",
+                    // "moment": "moment",
+                    // "vue-echarts": "VueECharts",
+                    // "axios":"axios",
+                    // "less":"less"
+                    // "querystring":"querystring"
         }
     },
 
@@ -34,7 +34,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://localhost:4004',//在线测试
+        target: 'https://localhost:8000',//在线测试
         // ws: true,
         changeOrigin: true,
         secure: false
@@ -56,20 +56,34 @@ module.exports = {
       // 提取出来的通用 chunk 和 vendor chunk。
       chunks: ["chunk-vendors", "chunk-common", "index"]
     },
-         settings : {
-           // page 的入口
-           entry: "src/views/settings.js",
-           // 模板来源
-           template: "public/settings.html",
-           // 在 dist/index.html 的输出
-           filename: "settings.html",
-           // 当使用 title 选项时，
-           // template 中的 title 标签需要是 <%= htmlWebpackPlugin.options.title %>
-           title: "Web OS - V1.2 Settings",
-           // 在这个页面中包含的块，默认情况下会包含
-           // 提取出来的通用 chunk 和 vendor chunk。
-           chunks: ["chunk-vendors", "chunk-common", "settings"]
-         }
+      settings : {
+        // page 的入口
+        entry: "src/views/settings.js",
+        // 模板来源
+        template: "public/settings.html",
+        // 在 dist/index.html 的输出
+        filename: "settings.html",
+        // 当使用 title 选项时，
+        // template 中的 title 标签需要是 <%= htmlWebpackPlugin.options.title %>
+        title: "Web OS - V1.2 Settings",
+        // 在这个页面中包含的块，默认情况下会包含
+        // 提取出来的通用 chunk 和 vendor chunk。
+        chunks: ["chunk-vendors", "chunk-common", "settings"]
+      },
+     notes : {
+       // page 的入口
+       entry: "src/views/notes.js",
+       // 模板来源
+       template: "public/notes.html",
+       // 在 dist/index.html 的输出
+       filename: "notes.html",
+       // 当使用 title 选项时，
+       // template 中的 title 标签需要是 <%= htmlWebpackPlugin.options.title %>
+       title: "Web OS - V1.2 Notes",
+       // 在这个页面中包含的块，默认情况下会包含
+       // 提取出来的通用 chunk 和 vendor chunk。
+       chunks: ["chunk-vendors", "chunk-common", "notes"]
+     }
   },
     pluginOptions:{}
 
