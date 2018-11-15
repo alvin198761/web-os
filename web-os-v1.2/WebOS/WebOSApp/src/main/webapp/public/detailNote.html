@@ -24,6 +24,7 @@
       font-display: fallback;
       letter-spacing: 0.05em;
       line-height: 2;
+      width: 100%;
     }
 
     article {
@@ -31,6 +32,7 @@
       max-width: 800px;
       margin: 0 auto;
     }
+
     a,
     a:hover,
     a:visited {
@@ -73,29 +75,17 @@
 
 <body>
 <div id="app">
-  <div style="width: 800px;margin-right: auto ; margin-left: auto">
-    <div style="text-align: center ; margin-bottom: 10px">
-      <wired-input placeholder="根据输入内容查找" style="width: 300px"></wired-input>
-      <wired-button>查询</wired-button>
-      <wired-button style="color: blue" @click="localtion.href= '/editNote.html'">添加</wired-button>
-    </div>
-    <el-row :gutter="100">
-      <el-col :span="12" v-for="item in dataList" key="item.id">
-        <wired-card elevation="4" style="margin-bottom: 20px">
-          <div style="text-align: right">
-            <wired-button>查看</wired-button>
-            <wired-button style="color: blue">编辑</wired-button>
-            <wired-button style="color: red">删除</wired-button>
-          </div>
-          <h3>{{item.title}}</h3>
-          <p
-            style=" line-height: 20px; white-space: nowrap; word-break: keep-all; overflow: hidden; text-overflow: ellipsis">
-            {{item.content}}
-          </p>
-        </wired-card>
-      </el-col>
-    </el-row>
-  </div>
+  <wired-textarea   style=" width: 800px;margin-right: auto ; margin-left: auto;height: 500px" value="临江仙 杨慎
+滚滚长江东逝水，浪花淘尽英雄。
+是非成败转头空，
+青山依旧在，几度夕阳红。
+白发渔樵江渚上，惯看秋月春风。
+一壶浊酒喜相逢，
+古今多少事，都付笑谈中。
+译文： 滚滚长江向东流，不再回">
+
+  </wired-textarea>
+
 </div>
 </body>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
@@ -109,24 +99,8 @@
     el: '#app',
     data: function () {
       return {
-        dataList: [
-          {
-            id: 1,
-            title: '111',
-            content: '111',
-            last_time: new Date()
-          }, {
-            id: 2,
-            title: '333',
-            content: '444444333333333333333333333',
-            last_time: new Date()
-          }, {
-            id: 13,
-            title: '555',
-            content: '113455341',
-            last_time: new Date()
-          },
-        ]
+        form: {},
+        rules: {}
       }
     },
     computed: {},

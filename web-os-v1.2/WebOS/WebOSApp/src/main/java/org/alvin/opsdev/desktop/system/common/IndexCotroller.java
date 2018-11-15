@@ -36,6 +36,11 @@ public class IndexCotroller extends PrincipalController {
 		return "browser";
 	}
 
+	@RequestMapping("/notes")
+	public String notes(){
+		return "notes";
+	}
+
 	@ResponseBody
 	@RequestMapping("/api/session/info")
 	public Users sessionInfo(Principal principal) {
