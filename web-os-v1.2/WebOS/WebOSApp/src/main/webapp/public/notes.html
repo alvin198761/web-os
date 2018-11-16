@@ -76,8 +76,8 @@
   <div style="width: 800px;margin-right: auto ; margin-left: auto">
     <div style="text-align: center ; margin-bottom: 10px">
       <wired-input placeholder="根据输入内容查找" style="width: 300px"></wired-input>
-      <wired-button>查询</wired-button>
-      <wired-button style="color: blue" @click="localtion.href= '/editNote.html'">添加</wired-button>
+      <wired-button @click="refresh">查询</wired-button>
+      <wired-button style="color: blue" @click="doAdd">添加</wired-button>
     </div>
     <el-row :gutter="100">
       <el-col :span="12" v-for="item in dataList" key="item.id">
@@ -131,14 +131,21 @@
     },
     computed: {},
     created: function () {
-      const that = this;
-      that.$http.post("/api/notes/queryList", JSON.stringify({})).then(res => {
-        that.dataList = res.data;
-      }).catch(err => {
-        this.$message.error("获取便签失败：" + err)
-      });
+      this.refresh();
     },
-    methods: {},
+    methods: {
+        doAdd(){
+          location.href= '/editNote.html'
+        },
+        refresh(){
+          const that = this;
+          that.$http.post("/api/notes/queryList", JSON.stringify({})).then(res => {
+            that.dataList = res.data;
+          }).catch(err => {
+            this.$message.error("获取便签失败：" + err)
+          });
+        }
+    },
     components: {}
   })
 </script>

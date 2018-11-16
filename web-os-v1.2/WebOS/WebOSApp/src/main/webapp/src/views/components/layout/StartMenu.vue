@@ -63,7 +63,7 @@
         </div>
         <div loc="1,1" size="4,3" class="block">
           <div class="content" style="background-color: orangered">
-            <div class="win10-block-content-text" style="font-size: 26px;line-height: 88px">
+            <div class="win10-block-content-text" style="font-size: 26px;line-height: 88px; cursor: pointer" @click="showNotes">
               <i class="fa fa-sticky-note"/> 便签
             </div>
             <div class="win10-block-content-text">显示信息</div>
@@ -118,6 +118,11 @@
         const server = window.location.protocol + "//" + window.location.hostname + ':' + window.location.port + '/settings#' + url;
         Win10.openUrl(server, title);
       },
+      showNotes(){
+        Win10.menuClose();
+        const server = window.location.protocol + "//" + window.location.hostname + ':' + window.location.port + '/notes.html';
+        Win10.openUrl(server, "我的便签");
+      }
     },
     components: { }
   }
