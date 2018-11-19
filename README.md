@@ -3,6 +3,7 @@
  2. 增加手绘风格的便签展示
  3. 增加打包脚本
  4. 开始菜单功能布局定型
+ 5. 前端架构调整为 vue-cli3 这个很关键，对以后的前端开发效率会更高
  <br/>效果图：
  ![image](https://github.com/alvin198761/web-os/blob/master/web-os-v1.2/pics/browser.png?raw=true)
  ![image](https://github.com/alvin198761/web-os/blob/master/web-os-v1.2/pics/notes.png?raw=true)
