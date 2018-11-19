@@ -1,3 +1,13 @@
+# V 1.2 描述
+ 1. 增加浏览器功能
+ 2. 增加手绘风格的便签展示
+ 3. 增加打包脚本
+ 4. 开始菜单功能布局定型
+ <br/>效果图：
+ ![image](https://github.com/alvin198761/web-os/blob/master/web-os-v1.2/pics/browser.png?raw=true)
+ ![image](https://github.com/alvin198761/web-os/blob/master/web-os-v1.2/pics/notes.png?raw=true)
+ ![image](https://github.com/alvin198761/web-os/blob/master/web-os-v1.2/pics/startMenu.png?raw=true)
+
 # V 1.1 描述
 在 V 0.3 的基础上将app死数据动态化，
 web-os-V1.1: 1.0 版本的根目录
@@ -15,7 +25,7 @@ web-os-V1.1: 1.0 版本的根目录
 5. 搭建阿里云测试 服务 ： [http://47.98.132.116:4004/](http://47.98.132.116:4004/) 
     > 用户名随便一个邮箱，密码随便输入
 6. 1.0 版本的访问地址作废了
-6.效果图：
+<br/>.效果图：
  ![image](https://github.com/alvin198761/web-os/blob/master/web-os-V1.1/pics/login.png?raw=true)
  ![image](https://github.com/alvin198761/web-os/blob/master/web-os-V1.1/pics/windows.png?raw=true)
  ![image](https://github.com/alvin198761/web-os/blob/master/web-os-V1.1/pics/bg.png?raw=true)

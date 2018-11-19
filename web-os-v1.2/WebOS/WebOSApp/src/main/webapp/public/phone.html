@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="WebOs Browser">
+  <meta name="keywords" content="WebOs">
+  <!-- 引入组件库 -->
+  <style>
+    body, html, #app {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* stage -- start */
+    .stage {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* stage -- end */
+
+    /* image -- start */
+    .img-sec {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+    / / height: 680 px;
+      perspective: 1800px;
+      background-color: #ddd;
+
+    @at-root {
+      .img-figure {
+        position: absolute;
+        width: 320px;
+        height: 360px;
+        margin: 0;
+        padding: 30px;
+        background-color: #FFF;
+        box-sizing: border-box;
+        cursor: pointer;
+        transform-origin: 0 50% 0;
+        transform-style: preserve-3d;
+        transition: transform .6s ease-in-out, left .6s ease-in-out, top .6s ease-in-out;
+        -webkit-transition: -webkit-transform .6s ease-in-out, left .6s ease-in-out, top .6s ease-in-out;
+
+    &.is-inverse {
+       transform: translate(320px) rotateY(180deg);
+     }
+    }
+
+    .img-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+      overflow: auto;
+
+      color: #666;
+    / / font-size: 22 px;
+      text-align: center;
+    / / line-height: 1.25;
+
+      background-color: #fff;
+
+      box-sizing: border-box;
+      transform: rotateY(180deg) translateZ(1px);
+      backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+
+    /
+    /
+    p {
+    / / margin: 0;
+    / /
+    }
+
+    }
+
+    figcaption {
+      text-align: center;
+
+    .img-title {
+      margin: 15px 0 0 0;
+      color: #a7a0a2;
+      font-size: 15px;
+    }
+
+    }
+    }
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+
+  <section data-reactroot="" class="stage">
+    <section class="img-sec">
+      <figure class="img-figure" style="left: -22px; top: 83px; transform: rotate(-21deg);"><img
+        src="./assets/bcf71587cf413cdda9bd73210a2b6902.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>We must try our best to bite the bullet and do a thing, Otherwise, we will achieve
+            nothing. （ Hitler ）
+            —— 我们必须咬紧牙关，全力以赴去做一件事情；否则，我们将一事无成。 （ 希特勒 ）</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: 249px; top: 161px; transform: rotate(15deg);"><img
+        src="./assets/ae6343f3f4a7daf7a0c65c7058e71886.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>Courage is going from failure to failure without losing enthusiasm. （ Churchill ）
+            —— 勇气就是不断失败，而不丧失热情。 （ 丘吉尔 ）</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: 247px; top: 382px; transform: rotate(29deg);"><img
+        src="./assets/c0198ef11b44fbfc99547ed87deb6d6d.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>We shall draw from the heart of suffering itself the means of inspiration and
+            survival.
+            —— 我们应从遭受苦难的心中获得呼吸、生存的方法。</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: 800px; top: 149px; z-index: 11;"><img
+        src="./assets/d5ba34a07c0fe9918213ec9ed856ef89.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>A pessimist sees the difficulty in every opportunity; an optimist sees the
+            opportunity in every difficulty.
+            —— 悲观主义者从每个机遇中看到困难，乐观主义者从每个困难中看到机遇。</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: -86px; top: 46px; transform: rotate(1deg);"><img
+        src="./assets/6d764766ad0c954cf316d145995e9f71.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>Solitary trees, if they grow at all, grow strong.
+            —— 孤独的树如果成长，就会成长得非常茁壮。</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: 243px; top: 63px; transform: rotate(23deg);"><img
+        src="./assets/1700e1ec1ceed809a3f22adeb131f8fb.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>History is written by the victors.
+            —— 历史是由胜利者书写的。</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: 317px; top: 193px; transform: rotate(11deg);"><img
+        src="./assets/a8673d0af258a0f0b3b4b93574927bed.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>Never leave that until tomorrow , which you can do today.
+            —— 今天的事不要拖到明天。</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: 467px; top: 58px; transform: rotate(-3deg);"><img
+        src="./assets/e5eb85c63257929113f8aeb2e96be780.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>Most folks are about as happy as they make up their minds to be.
+            —— 对于大多数人来说，他们认定自己有多幸福，就有多幸福。</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: 408px; top: -11px; transform: rotate(-24deg);"><img
+        src="./assets/cd705b3b9ae93e59aa1af0a33423dbb4.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>Where there is a will , there is a way.
+            —— 有志者，事竟成。</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: 1215px; top: 334px; transform: rotate(24deg);"><img
+        src="./assets/b1d216eb751f93e7df1620a58aa47c1c.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>Nothing is as important as passion. No matter what you want to do with your life, be
+            passionate.
+            —— 没有什么比热情更重要了，无论你想做什么，带着热情去做。</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: 1181px; top: -63px; transform: rotate(-3deg);"><img
+        src="./assets/dfd764b24ca4d1db08ee1c934d139304.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>I do not know anyone who has got to the top without hard work. That is the recipe. It
+            will not always get you to the top, but should get you pretty near.
+            —— 我不知道有人能不努力就取得成功卓越，这就是方法，努力不会让你每次都获得成功卓越，但能让你更靠近它许多。</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: 1277px; top: 209px; transform: rotate(20deg);"><img
+        src="./assets/086dfb06e2ebdaded1f7d44b5c5dbc04.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>Man are disturbed not by things, but by the view which they take of them.
+            —— 人们的困扰不是来自事情的本身，而是来自他们对事情的看法。</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: 1496px; top: 236px; transform: rotate(14deg);"><img
+        src="./assets/e449cd3c5a7633c4b06d7d35ba7a309a.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>Defeat is not bitter unless you swallow it.
+            —— 挫败并不痛苦，除非你接受它。</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: 1530px; top: 162px; transform: rotate(-7deg);"><img
+        src="./assets/c4cf123abec40a17539eaaf80c797ece.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>Life’s challenges are not supposed to paralyze you — they’re supposed to help you
+            discover who you are.
+            —— 人生的挑战不是要瘫痪你，而是帮你发现真实的你。</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: 1502px; top: 356px; transform: rotate(15deg);"><img
+        src="./assets/f3beaa5015c521e8e49687936ba7e03d.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>Many of life’s failures are experienced by people who did not realize how close they
+            were to success when they gave up.
+            —— 很多人失败，因为他们不知道他们放弃时，距离成功是多么的近。</p></div>
+        </figcaption>
+      </figure>
+      <figure class="img-figure" style="left: 1178px; top: 332px; transform: rotate(18deg);"><img
+        src="./assets/3e5e5264e7256b8ac0ce18686b101ef7.jpg" alt="Kuriyama Mirai">
+        <figcaption><h2 class="img-title">Kuriyama Mirai</h2>
+          <div class="img-back"><p>There is no disgrace in honest failure; there is disgrace in fearing to fail.
+            —— 坦率的失败并不丢脸，害怕失败才会丢脸。</p></div>
+        </figcaption>
+      </figure>
+    </section>
+  </section>
+</div>
+</body>
+</html>

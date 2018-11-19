@@ -120,7 +120,7 @@
       },
       showNotes(){
         Win10.menuClose();
-        const server = window.location.protocol + "//" + window.location.hostname + ':' + window.location.port + '/notes.html';
+        const server = window.location.protocol + "//" + window.location.hostname + ':' + window.location.port + '/notes';
         Win10.openUrl(server, "我的便签");
       }
     },
