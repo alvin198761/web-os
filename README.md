@@ -57,4 +57,20 @@ web-os-V1.1: 1.0 版本的根目录
     2. web-os-app : 后端项目 jdk 10 ,spring boot 2.x ,后端开发逻辑，目前只为 web-os-ui 提供接口
     3. web-os-ui ： 前端项目， vue vuex element 2.x 开发，
 
+# V0.3
+web-os-app: 项目后端，用来做真是数据处理，提供gucamole 连接等
+			部署见内部 readme.md
 
+web-os-ui: 项目前端，可以独立运行，具体操作见内部 readme.md
+
+新增照相机：
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/capture.png?raw=true)
+
+实例图：
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/rdp.png?raw=true)
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/vnc.png?raw=true)
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/ssh.png?raw=true)
+
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/111.png?raw=true)
+
+![image](https://github.com/alvin198761/web-os/blob/master/web-os-app/pics/222.png?raw=true)
